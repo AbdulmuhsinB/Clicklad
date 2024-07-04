@@ -1,0 +1,86 @@
+/* components/InformationSection.module.css */
+.informationSection {
+    background-color: #EDEDE9;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .leftContent {
+    flex: 1;
+    animation: slideInLeft 1s ease-out;
+  }
+  
+  .rightContent {
+    flex: 1;
+    padding-left: 40px;
+  }
+  
+  .image {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .title {
+    color: #414833;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    white-space: nowrap;
+  }
+  
+  .description {
+    color: #414833;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .number {
+    color: #8E3200;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: countUp 1s ease-out;
+  }
+  
+  .statTitle {
+    font-size: 1rem;
+  }
+  
+  .contactButton {
+    background-color: #8E3200;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .contactButton:hover {
+    background-color: #414833;
+  }
+  

@@ -1,0 +1,62 @@
+/* components/Navbar.module.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+
+.navbarLogo {
+  height: 40px;
+  margin-right: 20px;
+}
+
+.navbarLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.navbarLinks a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbarLinks a:hover {
+  color: grey;
+}
+
+.cartLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s;
+  margin-left: auto; /* Moves the cart link and icon to the right */
+}
+
+.cartLink:hover {
+  color: grey;
+}
+
+.cartIcon {
+  height: 20px;
+  margin-left: 5px;
+  flex-shrink: 0;
+  margin-right: 50px;
+}

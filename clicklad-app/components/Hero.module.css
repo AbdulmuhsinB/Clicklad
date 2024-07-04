@@ -1,0 +1,61 @@
+/* components/Hero.module.css */
+.hero {
+  background-image: url('/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 80px); /* Adjust height minus navbar height */
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  text-align: center; /* Center text within its container */
+  color: white;
+}
+
+.heroContent {
+  max-width: 100%; /* Ensure content stretches to full width */
+  padding: 0 20px; /* Add padding as needed */
+}
+
+.heroTitle {
+  font-size: 3rem; /* Adjust size as needed */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem; /* Adjust size as needed */
+  margin-bottom: 30px;
+}
+
+.heroButtons {
+  display: flex;
+  justify-content: center;
+}
+
+.heroButton {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.heroButton:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.learnMoreButton {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.learnMoreButton:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.3);
+}
