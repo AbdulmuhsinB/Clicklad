@@ -1,3 +1,4 @@
+// components/InformationSection.js
 import React from 'react';
 import styles from './InformationSection.module.css';
 
@@ -5,14 +6,14 @@ const InformationSection = () => {
   return (
     <section className={styles.informationSection}>
       <div className={styles.content}>
-        <div className={styles.leftContent}>
+        <div className={styles.imageContainer}>
           <img
-            src="/House.jpg" // Replace with your image URL
+            src="/House.jpg"
             alt="Innovative Aluminum Solutions"
-            className={`${styles.image} ${styles.floatIn}`}
+            className={styles.image}
           />
         </div>
-        <div className={styles.rightContent}>
+        <div className={styles.textContainer}>
           <h2 className={styles.title}>INNOVATIVE ALUMINUM SOLUTIONS</h2>
           <p className={styles.description}>
             <span className={styles.highlight}>Clicklad™</span> is a cladding material based on recycled aluminum that comes in a variety of sizes and cladding options. In the stages of thinking about the product, we were faced with several goals such as: installation time, product efficiency for weather conditions, system weight, and more. We are confident that we have managed to meet the requirements and challenges at the highest level.
@@ -26,6 +27,7 @@ const InformationSection = () => {
               <div className={styles.number}>3500+</div>
               <div className={styles.statTitle}>SATISFIED CUSTOMERS</div>
             </div>
+            <br></br>
             <div className={styles.stat}>
               <div className={styles.number}>20</div>
               <div className={styles.statTitle}>PRODUCTS & FINISHES</div>

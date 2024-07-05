@@ -5,10 +5,10 @@
   align-items: center;
   width: 100%;
   background-color: white;
-  padding: 10px 20px;
+  padding: 20px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
-  top: 0;
+  margin: -8px;
   z-index: 1000;
 }
 
@@ -30,7 +30,6 @@
 .navbarLinks a {
   text-decoration: none;
   color: black;
-  font-size: 14px;
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -44,7 +43,6 @@
   align-items: center;
   text-decoration: none;
   color: black;
-  font-size: 14px;
   font-weight: 500;
   transition: color 0.3s;
   margin-left: auto; /* Moves the cart link and icon to the right */
@@ -55,8 +53,38 @@
 }
 
 .cartIcon {
-  height: 20px;
+  height: 15px;
   margin-left: 5px;
   flex-shrink: 0;
-  margin-right: 50px;
+  margin-right: 50px; /* Adjusted margin for responsiveness */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  .navbarLinks {
+    display: none; /* Hide links by default on smaller screens */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute;
+    top: 60px; /* Adjust based on your navbar height */
+    left: 0;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .navbarLinks.active {
+    display: flex; /* Show links when active */
+  }
+
+  .navbarLinks a {
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    color: black;
+    font-size: 14px;
+  }
 }

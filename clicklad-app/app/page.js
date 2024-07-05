@@ -1,7 +1,18 @@
-// pages/index.js
+// app/page.js
+import Layout from '../app/layout';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Info from '../components/InformationSection'
+import Footer from '../components/Footer'
+
 
 export default function Home() {
   return (
-      <h1>Welcome to Clicklad App!</h1>
+    <Layout>
+        <Navbar />
+        <Hero />
+        <Info />
+        <Footer/>
+    </Layout>
   );
 }

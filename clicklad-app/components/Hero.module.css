@@ -1,29 +1,31 @@
-/* components/Hero.module.css */
+/* components/Hero.module.css  */
 .hero {
   background-image: url('/hero.jpg');
   background-size: cover;
   background-position: center;
-  height: calc(100vh - 80px); /* Adjust height minus navbar height */
+  height: calc(100vh - 80px);
   display: flex;
-  justify-content: center; /* Horizontally center content */
-  align-items: center; /* Vertically center content */
-  text-align: center; /* Center text within its container */
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
   color: white;
+  margin: -8px;
+
 }
 
 .heroContent {
-  max-width: 100%; /* Ensure content stretches to full width */
-  padding: 0 20px; /* Add padding as needed */
+  max-width: 100%;
+  padding: 0 20px;
 }
 
 .heroTitle {
-  font-size: 3rem; /* Adjust size as needed */
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
 .heroSubtitle {
-  font-size: 1.5rem; /* Adjust size as needed */
+  font-size: 1.5rem;
   margin-bottom: 30px;
 }
 
