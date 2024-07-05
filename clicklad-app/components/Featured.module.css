@@ -1,0 +1,39 @@
+.featured {
+  background-color: #414833;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: -8px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.slideshow {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.slideshowInner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.imageContainer {
+  flex: 0 0 25%; /* Each image container takes 25% of the width (4 images per view) */
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
