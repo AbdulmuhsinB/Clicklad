@@ -1,19 +1,31 @@
-/* components/Hero.module.css  */
+/* components/Hero.module.css */
 .hero {
+  position: relative;
   background-image: url('/hero.jpg');
   background-size: cover;
   background-position: center;
   height: calc(100vh - 80px);
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   text-align: center;
   color: white;
   margin: -8px;
+}
 
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
 }
 
 .heroContent {
+  position: relative; /* Ensure content stays above the overlay */
+  z-index: 1; /* Ensure content stays above the overlay */
   max-width: 100%;
   padding: 0 20px;
 }
