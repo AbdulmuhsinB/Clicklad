@@ -8,10 +8,13 @@
 
 ## In Progress
 - Begun the Information Section
+    - Animations need to be added
+- Begun Featured Projects Component
+    - Css and animations need to be done on it
+- Begun Contact Us Component
+    - Css and animations need to be done on it
 
 ## To Do
-- Do the Featured Projects Component
-- Do the Contact Us Component
 - Do the Footer Component
 
 # About Us Page
