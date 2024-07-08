@@ -1,39 +1,70 @@
-.featured {
+/* components/featured.module.css */
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.featured{
   background-color: #414833;
-  color: white;
-  text-align: center;
+  color: #FCF8F5;
   padding: 20px;
+  text-align: center;
   margin: -8px;
 }
 
-.title {
-  font-size: 24px;
-  font-weight: bold;
+.heading{
+  font-size: 3rem;
+
 }
 
-.description {
-  font-size: 16px;
-  margin-bottom: 20px;
+.description{
+  margin-top: 10px;
+  font-size: 2rem;
 }
 
-.slideshow {
-  display: flex;
+.logos {
   overflow: hidden;
-  width: 100%;
+  padding: 60px 0;
+  background: #414833;
+  white-space: nowrap;
   position: relative;
 }
 
-.slideshowInner {
-  display: flex;
-  transition: transform 0.5s ease;
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
 }
 
-.imageContainer {
-  flex: 0 0 25%; /* Each image container takes 25% of the width (4 images per view) */
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #414833);
 }
 
-.image {
-  width: 100%;
-  height: auto;
-  display: block;
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #414833);
+}
+
+.logos:hover .logosSlide {
+  animation-play-state: paused;
+}
+
+.logosSlide {
+  display: inline-block;
+  animation: 25s slide infinite linear;
+}
+
+.logosSlide img {
+  height: 250px;
+  margin: 0 10px;
 }
