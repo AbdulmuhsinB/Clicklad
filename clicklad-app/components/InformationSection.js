@@ -14,7 +14,7 @@ const InformationSection = () => {
           />
         </div>
         <div className={styles.textContainer}>
-          <h2 className={styles.title}>INNOVATIVE ALUMINUM SOLUTIONS</h2>
+          <h1 className={styles.title}>Innovative Aluminum Products</h1>
           <p className={styles.description}>
             <span className={styles.highlight}>Clicklad™</span> is a cladding material based on recycled aluminum that comes in a variety of sizes and cladding options. In the stages of thinking about the product, we were faced with several goals such as: installation time, product efficiency for weather conditions, system weight, and more. We are confident that we have managed to meet the requirements and challenges at the highest level.
           </p>

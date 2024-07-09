@@ -19,12 +19,14 @@
 
 .heading{
   font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 
 }
 
 .description{
-  margin-top: 10px;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 
 .logos {

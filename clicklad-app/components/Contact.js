@@ -1,26 +1,51 @@
-// Contact.js
 'use client';
+// Contact.js
 
 import React from 'react';
-import styles from './Contact.module.css'; // Import the CSS module
+import axios from 'axios';
+import styles from './Contact.module.css';
 
 const Contact = () => {
+    async function handleSubmit(e) {
+        e.preventDefault();
+
+        try {
+            const response = await axios.post("https://api.web3forms.com/submit", {
+                access_key: "3bd89381-1de5-4cb8-b1a0-efc2cfc1484e",
+                name: e.target.name.value,
+                email: e.target.email.value,
+                message: e.target.message.value,
+            });
+
+            if (response.data.success) {
+                console.log(response.data);
+                alert("Form submitted successfully!");
+                e.target.reset(); // Reset form fields on successful submission
+            } else {
+                alert("Failed to submit form. Please try again later.");
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            alert("Error submitting form. Please try again later.");
+        }
+    }
+
     return (
         <div className={styles.contactContainer}>
             <div className={styles.contactInfo}>
                 <div className={styles.contactText}>
-                    <h2>Contact Us</h2>
-                    <p>123 Main Street, Toronto, ON, M3L 2J2<br />
-                    647-842-4782<br />
-                    info@clicklad.ca</p>
+                    <h2 className={styles.heading}>Contact Us</h2>
+                    <p className={styles.description}>
+                        123 Main Street, Toronto, ON, M3L 2J2<br />
+                        647-842-4782<br />
+                        info@clicklad.ca
+                    </p>
                 </div>
             </div>
             <div className={styles.contactForm}>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className={styles.formGroup}>
                         <input type="text" id="name" name="name" placeholder="Your Name" className={styles.inputField} required />
-                    </div>
-                    <div className={styles.formGroup}>
                         <input type="email" id="email" name="email" placeholder="Your Email" className={styles.inputField} required />
                     </div>
                     <div className={styles.formGroup}>

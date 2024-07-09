@@ -1,9 +1,80 @@
-.Footer{
-    background-color: #414833 ;
-    text-align: center;
-    color: white;
-    padding: 20px;
+.footer {
+    background-color: #414833;
+    color: #FCF8F5;
+    padding: 20px 10px;
+    font-size: 1.3rem;
     margin: -8px;
     overflow: hidden;
-
-}
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 20px 0px;
+  }
+  
+  .column1 {
+    padding-right: 100px;
+  }
+  
+  .column3 {
+    padding-right: 10px;
+  }
+  
+  .column {
+    padding-right: 50px;
+  }
+  
+  .column h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .column p {
+    margin: 10px 0;
+  }
+  
+  .column .images {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .column3 .followIcon {
+    width: 40px;
+    height: auto;
+    margin-right: 5px;
+  }
+  
+  .copyright {
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  .footer a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 10px; /* Adjust padding for smaller screens */
+      text-align: center;
+    }
+    
+    .column {
+      padding-right: 0; /* Remove right padding for columns on smaller screens */
+      margin-bottom: 20px;
+    }
+    .column1 {
+        padding-right: 0px;
+      }
+  }
+  

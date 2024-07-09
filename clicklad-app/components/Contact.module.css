@@ -3,48 +3,73 @@
 .contactContainer {
     display: flex;
     background-color: #EDEDE9;
-    padding: 20px;
-    margin: -8px;
+    padding: 50px;
     overflow: hidden;
-
+    margin: -8px;
 }
 
 .contactInfo {
     flex: 1;
-    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 150px; /* Adjust as needed */
+    margin-bottom: 60px;
 }
 
 .contactText {
     color: #414833;
+    text-align: left;
 }
 
 .contactForm {
-    flex: 1;
+    flex: 1; /* Adjust flex value for responsiveness */
+    padding: 20px;
+    margin-right: 100px; /* Adjust as needed */
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    line-height: 1.6;
 }
 
 .formGroup {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-/* Use local class selectors to make the selector "pure" */
 .inputField {
-    width: 100%;
-    padding: 10px;
+    flex: 1;
+    padding: 15px;
     font-size: 16px;
     border: 1px solid #CCC;
     border-radius: 4px;
+    width: calc(50% - 5px); /* Adjust width as needed */
+}
+
+.inputField + .inputField {
+    margin-left: 10px;
 }
 
 .textAreaField {
-    width: 100%;
+    width: calc(100% - 10px); /* Adjust width as needed */
     padding: 10px;
     font-size: 16px;
     border: 1px solid #CCC;
     border-radius: 4px;
     resize: vertical;
+    height: 120px;
 }
 
 .button {
+    flex: 1;
     background-color: #414833;
     color: #FFFFFF;
     border: none;
@@ -56,4 +81,41 @@
 
 .button:hover {
     background-color: #2E382E;
+}
+
+@media (max-width: 768px) {
+    .contactContainer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .contactInfo {
+        text-align: center;
+        margin-left: 0; /* Reset margin for smaller screens */
+        margin-bottom: 30px; /* Adjust as needed */
+    }
+
+    .contactForm {
+        flex: 1; /* Increase flex value to make the form section bigger */
+        margin-right: 0; /* Reset margin for smaller screens */
+    }
+
+    .contactText {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .formGroup {
+        flex-direction: column;
+    }
+
+    .formGroup .inputField,
+    .formGroup .textAreaField {
+        width: calc(100% - 20px); /* Adjust width for full width */
+        margin-bottom: 10px;
+    }
+
+    .formGroup .inputField + .inputField {
+        margin-left: 0; /* Remove left margin between inputs */
+    }
 }
