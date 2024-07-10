@@ -1,3 +1,5 @@
+// pages/Product.js
+
 import React from 'react';
 import Layout from '../layout';
 import Navbar from '../../components/Navbar';
@@ -11,7 +13,6 @@ export default function Product() {
     <Layout>
       <Navbar />
       <div className={styles.page}>
-        <h1 className={styles['our-products']}>Our Products</h1>
         <ProductList products={productsData} />
       </div>
       <Footer />

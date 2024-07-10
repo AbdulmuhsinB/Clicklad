@@ -3,7 +3,7 @@
 import React from 'react';
 import styles from './ProductCard.module.css';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, onClick }) => {
   const backgroundImageStyle = {
     backgroundImage: `url(${product.image})`,
     backgroundSize: 'cover',
@@ -11,8 +11,12 @@ const ProductCard = ({ product }) => {
     position: 'relative', // Ensure relative positioning for absolute children
   };
 
+  const handleClick = () => {
+    onClick(product.id); // Pass the product ID to the parent component
+  };
+
   return (
-    <div className={styles['product-card']}>
+    <div className={styles['product-card']} onClick={handleClick}>
       <div className={styles['product-image']} style={backgroundImageStyle}>
         {product.discount > 0 && (
           <div className={styles['discount-bubble']}>

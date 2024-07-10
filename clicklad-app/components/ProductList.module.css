@@ -5,6 +5,11 @@
   overflow: hidden;
 }
 
+.our-products {
+  color: #414833;
+  margin-bottom: 20px;
+}
+
 .product-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Default: 4 cards per row on desktop */
