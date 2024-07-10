@@ -1,0 +1,26 @@
+.product-list-wrapper {
+  display: flex;
+  justify-content: center; /* Center the grid container horizontally */
+  padding: 20px; /* Optional: Add some padding around the grid */
+  overflow: hidden;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default: 4 cards per row on desktop */
+  gap: 20px; /* Adjust gap between cards as needed */
+  max-width: 1200px; /* Optional: Limit the maximum width of the grid container */
+
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row on tablets */
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on mobile devices */
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; /* 1 card per row on smaller mobile devices */
+  }
+}
