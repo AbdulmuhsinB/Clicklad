@@ -50,51 +50,41 @@ class ProductDetail extends Component {
 
     return (
       <div className={styles['product-detail']}>
-        <div className={styles['detail-header']}>
-          <button className={styles['back-button']} onClick={onBack}>
-            Back
-          </button>
+        <div className={styles['image-section']}>
+          <div className={styles['thumbnail-images']}>
+            {product.alternateImages.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`${product.name} alt ${index}`}
+                className={styles['thumbnail-image']}
+                ref={(el) => this.thumbnailRefs[index] = el}
+                onClick={() => this.handleImageClick(image, index)}
+              />
+            ))}
+          </div>
+          <img ref={this.mainImageRef} src={mainImage} alt={product.name} className={styles['main-image']} />
         </div>
-        <div className={styles['detail-content']}>
-          <div className={styles['image-section']}>
-            <div className={styles['thumbnail-images']}>
-              {product.alternateImages.map((image, index) => (
-                <img
+        <div className={styles['details-section']}>
+          <h2 className={styles['product-name']}>{product.name}</h2>
+          <p className={styles['product-description']}>{product.description}</p>
+          <hr className={styles['separator']} />
+          <div className={styles['color-section']}>
+            <p>Color</p>
+            <div className={styles['color-options']}>
+              {product.colors.map((color, index) => (
+                <div
                   key={index}
-                  src={image}
-                  alt={`${product.name} alt ${index}`}
-                  className={styles['thumbnail-image']}
-                  ref={(el) => this.thumbnailRefs[index] = el}
-                  onClick={() => this.handleImageClick(image, index)}
-                />
+                  className={`${styles['color-circle']} ${selectedColor === color ? styles['selected-color'] : ''}`}
+                  style={{ backgroundColor: color }}
+                  onClick={() => this.handleColorClick(color, index)}
+                ></div>
               ))}
             </div>
-            <img ref={this.mainImageRef} src={mainImage} alt={product.name} className={styles['main-image']} />
           </div>
-          <div className={styles['details-section']}>
-            <h2 className={styles['product-name']}>{product.name}</h2>
-            <p className={styles['product-description']}>{product.description}</p>
-            <p className={styles['product-price']}>Price: ${product.price}</p>
-            {product.discount > 0 && <p className={styles['product-discount']}>Discount: {product.discount}% Off</p>}
-            {product.colors.length > 0 && (
-              <div className={styles['color-section']}>
-                <p>Colors:</p>
-                <div className={styles['color-options']}>
-                  {product.colors.map((color, index) => (
-                    <div
-                      key={index}
-                      className={`${styles['color-circle']} ${selectedColor === color ? styles['selected-color'] : ''}`}
-                      style={{ backgroundColor: color }}
-                      onClick={() => this.handleColorClick(color, index)}
-                    ></div>
-                  ))}
-                </div>
-              </div>
-            )}
-            <button className={styles['add-to-cart-button']} onClick={this.addToCart}>
-              Add to Cart
-            </button>
-          </div>
+          <button className={styles['add-to-cart-button']} onClick={this.addToCart}>
+            Add to Cart
+          </button>
         </div>
       </div>
     );
