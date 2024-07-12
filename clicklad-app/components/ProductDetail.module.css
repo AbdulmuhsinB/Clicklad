@@ -1,12 +1,13 @@
 .product-detail {
   display: flex;
   flex-direction: column;
+  padding: 10px; /* Optional padding for the overall component */
 }
 
 .detail-header {
   display: flex;
   justify-content: flex-start;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .back-button {
@@ -15,62 +16,67 @@
 
 .detail-content {
   display: flex;
-  justify-content: space-between;
+  gap: 10px; /* 10px gap between the image section and details section */
 }
 
 .image-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .thumbnail-images {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px; /* Margin between the thumbnails and main image */
 }
 
 .thumbnail-image {
   width: 50px;
   height: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 5px; /* Margin between thumbnail images */
   cursor: pointer;
+  object-fit: cover;
 }
 
 .main-image {
   width: 300px;
   height: 300px;
-  margin-left: 20px;
+  object-fit: cover;
 }
 
 .details-section {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
 }
 
 .product-name {
   font-size: 2em;
+  margin: 10px 0; /* Margin above and below the product name */
 }
 
-.product-description, .product-price, .product-discount {
-  margin: 10px 0;
+.product-description,
+.product-price,
+.product-discount {
+  margin: 5px 0; /* Margin between description, price, and discount */
 }
 
 .color-section {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 10px; /* Margin above the color section */
 }
 
 .color-options {
   display: flex;
   flex-wrap: wrap;
+  gap: 5px; /* Gap between color circles */
 }
 
 .color-circle {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  margin-right: 10px;
   cursor: pointer;
   border: 2px solid transparent;
   transition: border 0.3s;
@@ -90,5 +96,5 @@
   color: white;
   border: none;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 10px; /* Margin above the add-to-cart button */
 }

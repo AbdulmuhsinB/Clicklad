@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './ProductDetail.module.css'; // Import your CSS module
+import styles from './ProductDetail.module.css';
 
 class ProductDetail extends Component {
   constructor(props) {
@@ -36,6 +36,14 @@ class ProductDetail extends Component {
     this.props.product.alternateImages = updatedAlternateImages;
   }
 
+  addToCart = () => {
+    const { product } = this.props;
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({ ...product, selectedColor: this.state.selectedColor });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert('Product added to cart!');
+  };
+
   render() {
     const { product, onBack } = this.props;
     const { mainImage, selectedColor } = this.state;
@@ -43,8 +51,9 @@ class ProductDetail extends Component {
     return (
       <div className={styles['product-detail']}>
         <div className={styles['detail-header']}>
-          <img className={styles['back-button']} onClick={onBack} src='/back-icon.png'>
-          </img>
+          <button className={styles['back-button']} onClick={onBack}>
+            Back
+          </button>
         </div>
         <div className={styles['detail-content']}>
           <div className={styles['image-section']}>
@@ -82,7 +91,9 @@ class ProductDetail extends Component {
                 </div>
               </div>
             )}
-            <button className={styles['add-to-cart-button']}>Add to Cart</button>
+            <button className={styles['add-to-cart-button']} onClick={this.addToCart}>
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>

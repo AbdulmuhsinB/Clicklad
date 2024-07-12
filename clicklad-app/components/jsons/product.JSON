@@ -6,7 +6,7 @@
     "price": 50,
     "discount": 10,
     "image": "/SlideshowImages/Slideshow-3.png",
-    "colors": ["red", "blue", "green"],
+    "colors": ["red", "blue", "green","yellow"],
     "alternateImages": [
       "/SlideshowImages/Slideshow-7.png",
       "/SlideshowImages/Slideshow-2.png",

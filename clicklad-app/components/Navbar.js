@@ -16,7 +16,7 @@ export default function Navbar() {
           <a href="#contact">Contact</a>
         </div>
       </div>
-      <a href="#cart" className={styles.cartLink}>
+      <a href="/cart" className={styles.cartLink}>
         Cart
         <img src="/cart-icon.png" alt="Cart" className={styles.cartIcon} />
       </a>
