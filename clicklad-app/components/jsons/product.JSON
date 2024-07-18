@@ -3,10 +3,13 @@
     "id": 1,
     "name": "PRODUCT 1",
     "description": "Description of Product 1",
-    "price": 50,
     "discount": 10,
     "image": "/SlideshowImages/Slideshow-3.png",
-    "colors": ["red", "blue", "green","yellow"],
+    "colors": [
+        { "title": "wood1", "image": "/materials/wood1.png" },
+        { "title": "wood1", "image": "/materials/wood2.png" },
+        { "title": "wood1", "image": "/materials/wood3.png" }
+    ], 
     "alternateImages": [
       "/SlideshowImages/Slideshow-7.png",
       "/SlideshowImages/Slideshow-2.png",
@@ -18,10 +21,12 @@
     "id": 2,
     "name": "PRODUCT 2",
     "description": "Description of Product 2",
-    "price": 100,
-    "discount": 0,
     "image": "/house.jpg",
-    "colors": ["black", "white"],
+    "colors": [
+      { "title": "wood1", "image": "/materials/wood1.png" },
+      { "title": "wood1", "image": "/materials/wood2.png" },
+      { "title": "wood1", "image": "/materials/wood3.png" }
+    ], 
     "alternateImages": [
       "/SlideshowImages/Slideshow-1.png",
       "/SlideshowImages/Slideshow-3.png"
@@ -31,10 +36,12 @@
     "id": 3,
     "name": "PRODUCT 3",
     "description": "Description of Product 3",
-    "price": 250,
-    "discount": 10,
     "image": "/hero.jpg",
-    "colors": ["silver", "gold"],
+    "colors": [
+      { "title": "wood1", "image": "/materials/wood1.png" },
+      { "title": "wood1", "image": "/materials/wood2.png" },
+      { "title": "wood1", "image": "/materials/wood3.png" }
+    ], 
     "alternateImages": [
       "/house.jpg",
       "/SlideshowImages/Slideshow-3.png",
@@ -46,10 +53,12 @@
     "id": 4,
     "name": "PRODUCT 4",
     "description": "Description of Product 4",
-    "price": 40,
-    "discount": 0,
     "image": "/SlideshowImages/Slideshow-7.png",
-    "colors": ["yellow", "orange"], 
+    "colors": [
+      { "title": "wood1", "image": "/materials/wood1.png" },
+      { "title": "wood1", "image": "/materials/wood2.png" },
+      { "title": "wood1", "image": "/materials/wood3.png" }
+    ], 
     "alternateImages": [
       "/SlideshowImages/Slideshow-1.png",
       "/SlideshowImages/Slideshow-2.png",
@@ -61,10 +70,13 @@
       "id": 5,
       "name": "PRODUCT 5",
       "description": "Description of Product 5",
-      "price": 50,
       "discount": 50,
       "image": "/SlideshowImages/Slideshow-6.png",
-      "colors": ["purple", "pink"],
+      "colors": [
+      { "title": "wood1", "image": "/materials/wood1.png" },
+      { "title": "wood1", "image": "/materials/wood2.png" },
+      { "title": "wood1", "image": "/materials/wood3.png" }
+      ], 
       "alternateImages": [
         "/SlideshowImages/Slideshow-5.png",
         "/SlideshowImages/Slideshow-3.png",
@@ -76,15 +88,10 @@
       "id": 6,
       "name": "PRODUCT 6",
       "description": "Description of Product 6",
-      "price": 314350,
       "discount": 0,
       "image": "/SlideshowImages/Slideshow-6.png",
       "colors": [],
       "alternateImages": [
-        "/SlideshowImages/Slideshow-6.png",
-        "/SlideshowImages/Slideshow-5.png",
-        "/SlideshowImages/Slideshow-4.png"
-
       ]
     }
 ]

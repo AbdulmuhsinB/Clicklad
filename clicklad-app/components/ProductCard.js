@@ -8,23 +8,16 @@ const ProductCard = ({ product, onClick }) => {
     backgroundImage: `url(${product.image})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    position: 'relative', // Ensure relative positioning for absolute children
+    position: 'relative', 
   };
 
   const handleClick = () => {
-    onClick(product.id); // Pass the product ID to the parent component
+    onClick(product.id);
   };
 
   return (
     <div className={styles['product-card']} onClick={handleClick}>
       <div className={styles['product-image']} style={backgroundImageStyle}>
-        {product.discount > 0 && (
-          <div className={styles['discount-bubble']}>
-            <div className={styles['discount-text']}>
-              {product.discount}% Off
-            </div>
-          </div>
-        )}
       </div>
       <div className={styles['product-content']}>
         <div className={styles['product-name']}>{product.name}</div>

@@ -1,94 +1,122 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 import styles from './ProductDetail.module.css';
 
-class ProductDetail extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      mainImage: props.product.image,
-      selectedColor: null,
-    };
-    this.mainImageRef = React.createRef();
-    this.thumbnailRefs = [];
-  }
+const ProductDetail = ({ product }) => {
+  const [mainImage, setMainImage] = useState(product.image);
+  const [selectedColorIndex, setSelectedColorIndex] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  handleColorClick(color, index) {
-    this.setState({ selectedColor: color });
-
-    // Remove selected class from all circles
-    document.querySelectorAll(`.${styles['color-circle']}`).forEach(circle => {
-      circle.classList.remove(styles['selected-color']);
-    });
-
-    // Add selected class to clicked circle
-    this.thumbnailRefs[index].classList.add(styles['selected-color']);
-  }
-
-  handleImageClick(image, index) {
-    // Swap main image with clicked thumbnail
-    const currentMainImage = this.state.mainImage;
-    this.setState({ mainImage: image });
-
-    // Update the alternate images array
-    const updatedAlternateImages = [...this.props.product.alternateImages];
-    updatedAlternateImages[index] = currentMainImage;
-
-    this.props.product.alternateImages = updatedAlternateImages;
-  }
-
-  addToCart = () => {
-    const { product } = this.props;
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push({ ...product, selectedColor: this.state.selectedColor });
-    localStorage.setItem('cart', JSON.stringify(cart));
-    alert('Product added to cart!');
+  const handleColorClick = (index) => {
+    setSelectedColorIndex(index);
   };
 
-  render() {
-    const { product, onBack } = this.props;
-    const { mainImage, selectedColor } = this.state;
+  const handleImageClick = (image) => {
+    setMainImage(image);
+  };
 
-    return (
-      <div className={styles['product-detail']}>
-        <div className={styles['image-section']}>
-          <div className={styles['thumbnail-images']}>
-            {product.alternateImages.map((image, index) => (
+  const nextSlide = () => {
+    const images = [product.image, ...product.alternateImages];
+    setCurrentSlide((prev) => (prev + 1) % images.length);
+    setMainImage(images[(currentSlide + 1) % images.length]);
+  };
+
+  const prevSlide = () => {
+    const images = [product.image, ...product.alternateImages];
+    setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
+    setMainImage(images[(currentSlide - 1 + images.length) % images.length]);
+  };
+
+  const addToCart = () => {
+    if (selectedColorIndex !== null) {
+      const selectedColor = product.colors[selectedColorIndex];
+      const selectedItem = {
+        id: product.id,
+        name: product.name,
+        color: selectedColor.title,
+      };
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push(selectedItem);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert('Product added to cart!');
+    } else {
+      alert('Please select a color before adding to cart.');
+    }
+  };
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: nextSlide,
+    onSwipedRight: prevSlide,
+  });
+
+  return (
+    <div className={styles['product-detail']}>
+      <div className={styles['image-section']}>
+        <div className={styles['thumbnail-images']}>
+          {product.alternateImages.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`${product.name} alt ${index}`}
+              className={styles['thumbnail-image']}
+              onClick={() => handleImageClick(image)}
+            />
+          ))}
+        </div>
+        <div {...swipeHandlers} className={styles['main-image-container']}>
+          <img
+            src={mainImage}
+            alt={product.name}
+            className={styles['main-image']}
+          />
+          <div className={styles['slideshow-controls']}>
+            <button onClick={prevSlide} className={styles['prev-button']}>
+              <img src="/icons/back-icon.png" alt="Previous" className={styles['icon']} />
+            </button>
+            <button onClick={nextSlide} className={styles['next-button']}>
+              <img src="/icons/back-icon.png" alt="Next" className={`${styles['icon']} ${styles['rotate']}`} />
+            </button>
+          </div>
+          <div className={styles['pagination']}>
+            {Array(product.alternateImages.length + 1).fill().map((_, index) => (
+              <span
+                key={index}
+                className={`${styles['dot']} ${index === currentSlide ? styles['active'] : ''}`}
+                onClick={() => {
+                  setCurrentSlide(index);
+                  setMainImage([product.image, ...product.alternateImages][index]);
+                }}
+              ></span>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className={styles['details-section']}>
+        <h2 className={styles['product-name']}>{product.name}</h2>
+        <p className={styles['product-description']}>{product.description}</p>
+        <hr className={styles['separator']} />
+
+        <div className={styles['color-section']}>
+          <p className={styles['product-description']}>Colors:</p>
+          <div className={styles['color-options']}>
+            {product.colors.map((color, index) => (
               <img
                 key={index}
-                src={image}
-                alt={`${product.name} alt ${index}`}
-                className={styles['thumbnail-image']}
-                ref={(el) => this.thumbnailRefs[index] = el}
-                onClick={() => this.handleImageClick(image, index)}
+                src={color.image}
+                alt={color.title}
+                className={`${styles['color-circle']} ${selectedColorIndex === index ? styles['selected'] : ''}`}
+                onClick={() => handleColorClick(index)}
               />
             ))}
           </div>
-          <img ref={this.mainImageRef} src={mainImage} alt={product.name} className={styles['main-image']} />
         </div>
-        <div className={styles['details-section']}>
-          <h2 className={styles['product-name']}>{product.name}</h2>
-          <p className={styles['product-description']}>{product.description}</p>
-          <hr className={styles['separator']} />
-          <div className={styles['color-section']}>
-            <p>Color</p>
-            <div className={styles['color-options']}>
-              {product.colors.map((color, index) => (
-                <div
-                  key={index}
-                  className={`${styles['color-circle']} ${selectedColor === color ? styles['selected-color'] : ''}`}
-                  style={{ backgroundColor: color }}
-                  onClick={() => this.handleColorClick(color, index)}
-                ></div>
-              ))}
-            </div>
-          </div>
-          <button className={styles['add-to-cart-button']} onClick={this.addToCart}>
-            Add to Cart
-          </button>
-        </div>
+        <button className={styles['add-to-cart-button']} onClick={addToCart}>
+          Add to Cart
+        </button>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default ProductDetail;
