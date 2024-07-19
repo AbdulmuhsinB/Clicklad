@@ -34,6 +34,8 @@ const ProductDetail = ({ product }) => {
         id: product.id,
         name: product.name,
         color: selectedColor.title,
+        image: mainImage,
+        price: product.price,
       };
 
       let cart = JSON.parse(localStorage.getItem('cart')) || [];
