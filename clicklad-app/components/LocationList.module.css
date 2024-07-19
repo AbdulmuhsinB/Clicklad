@@ -1,0 +1,51 @@
+/* LocationList.module.css */
+
+.container {
+    padding: 20px;
+    padding-top: 80px;
+}
+
+.provinceSection {
+    margin-bottom: 30px;
+}
+
+.provinceTitle {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.locationCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    color: #414833;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px); /* Adjust width as needed */
+}
+
+.cardTitle {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.cardAddress,
+.cardPhone,
+.cardEmail {
+    margin: 5px 0;
+}
+
+.cardEmail {
+    margin-bottom: 15px;
+}
+
+.directionsLink {
+    color: #0000EE;
+    text-decoration: underline;
+    cursor: pointer;
+}
