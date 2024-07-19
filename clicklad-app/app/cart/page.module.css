@@ -49,9 +49,10 @@
 
 .form-section {
   width: 50%;
-  background-color: white;
   padding: 20px;
   border: 1px solid #ddd;
+  background-color: white;
+
 }
 
 /* Responsive styles */
@@ -191,11 +192,6 @@
   cursor: pointer;
   margin-top: 20px;
   align-self: flex-end;
-}
-
-.gap {
-  height: 20px;
-  background-color: transparent;
 }
 
 

@@ -162,12 +162,12 @@ class Cart extends Component {
                   ))}
                 </div>
               )}
-              <div className={styles['cart-footer']}>
+              <a href="/product" className={styles['cart-footer']}>
                 <button className={styles['continue-shopping']}>
                   <img src="/icons/back-icon.png" alt="Continue shopping" />
                   Continue shopping
                 </button>
-              </div>
+              </a>
             </div>
             <div className={styles['form-section']}>
               <form className={styles['checkout-form']} onSubmit={this.handleSubmit}>

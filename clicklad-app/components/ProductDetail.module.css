@@ -147,6 +147,23 @@
   height: 25px;
 }
 
+.back-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.back-button img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.back-button:hover img {
+  transform: scale(1.1);
+}
+
 .rotate {
   transform: rotate(180deg);
 }
@@ -203,4 +220,10 @@
     opacity: 1; /* Show on small screens */
     visibility: visible; /* Show on small screens */
   }
+
+  .back-button {
+    margin-right: 80%;
+    padding: 10px;
+  }
+
 }

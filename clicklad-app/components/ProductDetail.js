@@ -54,6 +54,9 @@ const ProductDetail = ({ product }) => {
 
   return (
     <div className={styles['product-detail']}>
+        <a href="/product" className={styles['back-button']}>
+                  <img src="/icons/back-icon.png" alt="Continue shopping" />
+              </a>
       <div className={styles['image-section']}>
         <div className={styles['thumbnail-images']}>
           {product.alternateImages.map((image, index) => (
