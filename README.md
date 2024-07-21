@@ -1,5 +1,9 @@
 # Clicklad Website
 
+# To Run
+- npm i
+- npm run dev
+
 # Home Page
 
 ## Progress
