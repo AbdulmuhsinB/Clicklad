@@ -1,37 +1,62 @@
 [
     {
       "province": "Ontario",
+      "provinceAbreviation" : "ON",
       "locations": [
         {
           "name": "Store 1",
           "address": "49 Olympia Crescent",
-          "phone": "123-456-7890",
+          "city": "Toronto",
+          "postalCode": "M1B 2K3",
+          "phone": "(123) 456-7890",
           "email": "store1@example.com"
         },
         {
           "name": "Store 2",
           "address": "456 Elm St",
-          "phone": "987-654-3210",
+          "city": "Ottawa",
+          "postalCode": "K1A 0B1",
+          "phone": "(987) 654-3210",
           "email": "store2@example.com"
         },
         {
             "name": "Store 3",
-            "address": "19 plymouth",
-            "phone": "987-654-3210",
+            "address": "123 Elm St",
+            "city": "Mississauga",
+            "postalCode": "L5B 3Z9",
+            "phone": "(123) 654-3210",
             "email": "store3@example.com"
+          },
+        {
+            "name": "Store 4",
+            "address": "19 Plymouth",
+            "city": "Brampton",
+            "postalCode": "L6T 4A4",
+            "phone": "(987) 654-3210",
+            "email": "store4@example.com"
           }
       ]
     },
     {
       "province": "British Columbia",
+      "provinceAbreviation" : "BC",
       "locations": [
         {
           "name": "Store A",
           "address": "789 Maple Ave",
-          "phone": "555-123-4567",
+          "city": "Vancouver",
+          "postalCode": "V5K 0A1",
+          "phone": "(555) 123-4567",
           "email": "storeA@example.com"
-        }
+        },
+        {
+            "name": "Store B",
+            "address": "73439 Acorn Ave",
+            "city": "Kelowna",
+            "postalCode": "V1Y 2A1",
+            "phone": "(555) 123-4567",
+            "email": "storeB@example.com"
+          }
       ]
     }
   ]
-  

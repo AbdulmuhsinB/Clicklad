@@ -1,51 +1,121 @@
-/* LocationList.module.css */
-
 .container {
     padding: 20px;
     padding-top: 80px;
 }
 
+.pageTitle{
+    font-size: 50px;
+    color: #414833;
+    font-weight: bold;
+    text-align: center;
+
+}
+  
 .provinceSection {
     margin-bottom: 30px;
 }
-
+  
 .provinceTitle {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 35px;
+    color: #414833;
+    margin: 30px 0px;
 }
-
+  
 .locationCards {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
-
+  
 .card {
     background-color: white;
     color: #414833;
     padding: 15px;
-    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(50% - 20px); /* Adjust width as needed */
+    width: 100%; /* Default to full width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
+  
 .cardTitle {
-    font-size: 1.2em;
+    font-size: 23px;
     margin-bottom: 5px;
 }
-
+  
 .cardAddress,
+.cardCity,
+.cardPostalCode,
 .cardPhone,
 .cardEmail {
-    margin: 5px 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
 }
-
+  
+.cardAddress{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+  
+.cardPostalCode{
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+  
+.cardPhone {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+  
 .cardEmail {
-    margin-bottom: 15px;
+    margin-bottom: 40px;
+}
+  
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+  
+.directionsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
 }
 
 .directionsLink {
-    color: #0000EE;
-    text-decoration: underline;
+    color: #414833;
+    text-decoration: none;
     cursor: pointer;
+    margin-bottom: 5px;
+}
+  
+.hrLine {
+    border: none;
+    border-top: 2px solid #414833;
+    width: 130px;
+    margin: 0;
+    margin-bottom: 25px;
+}
+  
+@media (min-width: 600px) {
+    .card {
+        width: calc(50% - 20px); /* Two cards per row on small screens */
+    }
+}
+  
+@media (min-width: 900px) {
+    .card {
+        width: calc(33.3333% - 20px); /* Three cards per row on medium screens */
+    }
+}
+  
+@media (min-width: 1200px) {
+    .card {
+        width: calc(25% - 20px); /* Four cards per row on large screens */
+    }
 }
