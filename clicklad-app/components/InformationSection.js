@@ -8,7 +8,7 @@ const InformationSection = () => {
       <div className={styles.content}>
         <div className={styles.imageContainer}>
           <img
-            src="/House.jpg"
+            src="/Home-Page/House.jpg"
             alt="Innovative Aluminum Solutions"
             className={styles.image}
           />

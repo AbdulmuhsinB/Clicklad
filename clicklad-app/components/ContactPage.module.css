@@ -1,0 +1,132 @@
+.contactContainer {
+    display: flex;
+    background-color: #EDEDE9;
+    padding: 50px;
+    overflow: hidden;
+    margin: -8px;
+}
+
+.contactContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 50px; /* Adjust as needed */
+}
+
+.contactImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.contactInfo {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.contactText {
+    color: #414833;
+    text-align: left;
+}
+
+.contactForm {
+    padding: 20px;
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inputField {
+    flex: 1;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    width: calc(50% - 5px); /* Adjust width as needed */
+}
+
+.inputField + .inputField {
+    margin-left: 10px;
+}
+
+.textAreaField {
+    width: calc(100% - 10px); /* Adjust width as needed */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    resize: vertical;
+    height: 120px;
+}
+
+.button {
+    flex: 1;
+    background-color: #414833;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #2E382E;
+}
+
+@media (max-width: 768px) {
+    .contactContainer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .contactContent {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .contactImage {
+        margin-bottom: 30px;
+    }
+
+    .contactText {
+        text-align: center;
+    }
+
+    .formGroup {
+        flex-direction: column;
+    }
+
+    .formGroup .inputField,
+    .formGroup .textAreaField {
+        width: calc(100% - 20px);
+        margin-bottom: 10px;
+    }
+
+    .formGroup .inputField + .inputField {
+        margin-left: 0;
+    }
+}

@@ -13,12 +13,12 @@ export default function Navbar() {
           <a href="/product">Products</a>
           <a href="/location">Locations</a>
           <a href="#faqs">FAQs</a>
-          <a href="#contact">Contact</a>
+          <a href="/contact">Contact</a>
         </div>
       </div>
       <a href="/cart" className={styles.cartLink}>
         Cart
-        <img src="/cart-icon.png" alt="Cart" className={styles.cartIcon} />
+        <img src="/icons/cart-icon.png" alt="Cart" className={styles.cartIcon} />
       </a>
     </nav>
   );

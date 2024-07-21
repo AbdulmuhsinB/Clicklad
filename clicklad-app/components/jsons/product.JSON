@@ -21,7 +21,7 @@
     "id": 2,
     "name": "PRODUCT 2",
     "description": "Description of Product 2",
-    "image": "/house.jpg",
+    "image": "/SlideshowImages/Slideshow-2.png",
     "colors": [
       { "title": "Mahogany", "image": "/materials/wood1.png" },
       { "title": "Birch", "image": "/materials/wood2.png" },
@@ -36,14 +36,14 @@
     "id": 3,
     "name": "PRODUCT 3",
     "description": "Description of Product 3",
-    "image": "/hero.jpg",
+    "image": "/SlideshowImages/Slideshow-1.png",
     "colors": [
       { "title": "wood1", "image": "/materials/wood1.png" },
       { "title": "wood1", "image": "/materials/wood2.png" },
       { "title": "wood1", "image": "/materials/wood3.png" }
     ], 
     "alternateImages": [
-      "/house.jpg",
+      "/SlideshowImages/Slideshow-5.png",
       "/SlideshowImages/Slideshow-3.png",
       "/SlideshowImages/Slideshow-7.png"
 

@@ -1,7 +1,7 @@
 /* components/Hero.module.css */
 .hero {
   position: relative;
-  background-image: url('/hero.jpg');
+  background-image: url('/Home-Page/hero.jpg');
   background-size: cover;
   background-position: center;
   height: calc(100vh - 80px);
