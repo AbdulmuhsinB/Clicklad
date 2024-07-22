@@ -10,6 +10,7 @@
 - Completed Cart Page
 - Compelted Location Page
 - Completed Contact Us Page
+- - FAQ Page
   
 ## In Progress
 - Animation need to be added to the Home Page
@@ -19,8 +20,6 @@
 
 ## To Do
 - About Us Page
-- FAQ Page
-
 
 
 
