@@ -3,7 +3,6 @@
     "id": 1,
     "name": "PRODUCT 1",
     "description": "Description of Product 1",
-    "discount": 10,
     "image": "/SlideshowImages/Slideshow-3.png",
     "colors": [
         { "title": "Mahogany", "image": "/materials/wood1.png" },
@@ -70,7 +69,6 @@
       "id": 5,
       "name": "PRODUCT 5",
       "description": "Description of Product 5",
-      "discount": 50,
       "image": "/SlideshowImages/Slideshow-6.png",
       "colors": [
       { "title": "Mahogany", "image": "/materials/wood1.png" },
@@ -88,7 +86,6 @@
       "id": 6,
       "name": "PRODUCT 6",
       "description": "Description of Product 6",
-      "discount": 0,
       "image": "/SlideshowImages/Slideshow-6.png",
       "colors": [],
       "alternateImages": [
