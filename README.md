@@ -4,40 +4,22 @@
 - npm i
 - npm run dev
 
-# Home Page
 
 ## Progress
-- Created the Navbar Component
-- Created the Hero Component
-
+- Completed Product Page
+- Completed Cart Page
+- Compelted Location Page
+- Completed Contact Us Page
+  
 ## In Progress
-- Begun the Information Section
-    - Animations need to be added
-- Begun Featured Projects Component
-    - Css and animations need to be done on it
-- Begun Contact Us Component
-    - Css and animations need to be done on it
+- Animation need to be added to the Home Page
+- Navbar needs to be made responsive
+- Product Detail page, needs the color to switch spots with the main image, so u can view things in different colors
+- Make the footer font size smaller
 
 ## To Do
-- Do the Footer Component
-
-# About Us Page
-- Design still to be Confirmed
-  
-# Product Page
-- Design still to be Confirmed
-  
-# Location Page
-- Design still to be Confirmed
-  
-# FAQs Page
-- Design still to be Confirmed
-
-# Contact Page
-- Design still to be Confirmed
-
-# Cart Page
-- Design still to be Confirmed
+- About Us Page
+- FAQ Page
 
 
 
