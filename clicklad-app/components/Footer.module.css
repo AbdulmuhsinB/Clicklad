@@ -2,7 +2,7 @@
     background-color: #414833;
     color: #FCF8F5;
     padding: 20px 10px;
-    font-size: 1.3rem;
+    font-size: 17px;
     margin: -8px;
     overflow: hidden;
   }
@@ -27,7 +27,6 @@
   }
   
   .column h2 {
-    font-size: 2rem;
     margin-bottom: 10px;
   }
   

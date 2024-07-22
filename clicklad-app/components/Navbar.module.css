@@ -1,4 +1,4 @@
-/* components/Navbar.module.css */
+/* Navbar styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -9,8 +9,15 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: -8px;
   overflow: hidden;
-    z-index: 1000;
-    position: fixed;
+  z-index: 1000;
+  position: fixed;
+  font-size: 18px;
+}
+
+.hamburgerIcon {
+  opacity: 0;
+  height: 20px;
+  cursor: pointer; /* Add cursor pointer for better UX */
 }
 
 .leftSection {
@@ -30,7 +37,7 @@
 
 .navbarLinks a {
   text-decoration: none;
-  color: black;
+  color: #414833;
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -43,7 +50,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: black;
+  color: #414833;
   font-weight: 500;
   transition: color 0.3s;
   margin-left: auto; /* Moves the cart link and icon to the right */
@@ -57,16 +64,20 @@
   height: 15px;
   margin-left: 5px;
   flex-shrink: 0;
-  margin-right: 50px; /* Adjusted margin for responsiveness */
+  margin-right: 20px;
 }
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 10px; /* Reduce padding on smaller screens */
+    padding: 10px;
   }
 
   .navbarLinks {
     display: none; /* Hide links by default on smaller screens */
+  }
+
+  .navbarLinks.active {
+    display: flex; /* Show links when active */
     flex-direction: column; /* Stack links vertically */
     position: absolute;
     top: 60px; /* Adjust based on your navbar height */
@@ -77,15 +88,67 @@
     z-index: 999;
   }
 
-  .navbarLinks.active {
-    display: flex; /* Show links when active */
-  }
-
   .navbarLinks a {
     padding: 10px 20px;
     text-align: center;
     width: 100%;
-    color: black;
+    color: #414833;
     font-size: 14px;
   }
+
+  .cartLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: transparent; /* Hide the text on smaller screens */
+    margin-left: auto; /* Moves the cart link and icon to the right */
+  }
+
+  .cartIcon {
+    margin-right: 20px;
+    visibility: visible; /* Ensure the icon is visible */
+  }
+
+  .hamburgerIcon {
+    opacity: 1;
+    margin-right: 20px;
+    margin-left: 5px;
+  }
+}
+
+/* Overlay and popup styling for the pop-up effect */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.01); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure overlay is behind the popup */
+}
+
+.popup {
+  background: white;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  position: absolute; /* Absolute positioning to place it in the top-right corner */
+  top: 57px; /* Adjust this value to control vertical distance from the top */
+  right: 0px; /* Adjust this value to control horizontal distance from the right */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for better visibility */
+  z-index: 1000; /* Ensure popup is above the overlay */
+}
+
+.popup a {
+  text-decoration: none;
+  color: #414833;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.popup a:hover {
+  color: grey;
 }
