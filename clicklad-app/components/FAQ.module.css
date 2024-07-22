@@ -3,6 +3,8 @@
     padding: 20px;
     padding-top: 100px;
     color: #414833;
+    margin: -8px;
+    overflow: hidden;
   }
   
   .title {
