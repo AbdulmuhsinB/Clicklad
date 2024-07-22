@@ -17,7 +17,6 @@
 - Animation need to be added to the Home Page
 - Navbar needs to be made responsive
 - Product Detail page, needs the color to switch spots with the main image, so u can view things in different colors
-- Make the footer font size smaller
 - Make the Home page more responsive 
 
 ## To Do
