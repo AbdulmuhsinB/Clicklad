@@ -1,10 +1,11 @@
-'use client'; // This directive indicates that this module should be executed in client-side only
+'use client';
 
 import React, { Component } from 'react';
 import styles from './page.module.css';
 import Layout from '../layout';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import productsData from '../../components/jsons/product.json'; // Ensure the path to your product.json is correct
 
 class Cart extends Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class Cart extends Component {
     if (typeof window !== 'undefined') {
       const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
       const uniqueCart = this.getUniqueCart(storedCart);
-      this.setState({ cart: uniqueCart });
+      this.setState({ cart: this.mergeCartWithProducts(uniqueCart) });
     }
   }
 
@@ -45,6 +46,19 @@ class Cart extends Component {
     });
 
     return uniqueItems;
+  }
+
+  mergeCartWithProducts(cart) {
+    return cart.map(cartItem => {
+      const product = productsData.find(product => product.id === cartItem.id);
+      const colorData = product.colors.find(color => color.title === cartItem.color) || {};
+      return {
+        ...cartItem,
+        name: product.name,
+        image: product.image,
+        colorImage: colorData.image,
+      };
+    });
   }
 
   handleInputChange = (e) => {
@@ -77,7 +91,6 @@ class Cart extends Component {
     e.preventDefault();
     const { formData, cart } = this.state;
 
-    // Prepare the data to be sent to Web3Forms
     const data = {
       access_key: '3bd89381-1de5-4cb8-b1a0-efc2cfc1484e',
       ...formData,
@@ -95,7 +108,6 @@ class Cart extends Component {
 
       if (response.ok) {
         alert('Order submitted successfully!');
-        // Clear the cart and form data on successful submission
         this.handleClearCart();
         this.setState({
           formData: {

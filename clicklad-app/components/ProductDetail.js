@@ -4,7 +4,7 @@ import styles from './ProductDetail.module.css';
 
 const ProductDetail = ({ product }) => {
   const [mainImage, setMainImage] = useState(product.image);
-  const [selectedColorIndex, setSelectedColorIndex] = useState(0);
+  const [selectedColorIndex, setSelectedColorIndex] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleColorClick = (index) => {
@@ -32,10 +32,7 @@ const ProductDetail = ({ product }) => {
       const selectedColor = product.colors[selectedColorIndex];
       const selectedItem = {
         id: product.id,
-        name: product.name,
         color: selectedColor.title,
-        image: mainImage,
-        price: product.price,
       };
 
       let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -54,9 +51,9 @@ const ProductDetail = ({ product }) => {
 
   return (
     <div className={styles['product-detail']}>
-        <a href="/product" className={styles['back-button']}>
-                  <img src="/icons/back-icon.png" alt="Continue shopping" />
-              </a>
+      <a href="/product" className={styles['back-button']}>
+        <img src="/icons/back-icon.png" alt="Continue shopping" />
+      </a>
       <div className={styles['image-section']}>
         <div className={styles['thumbnail-images']}>
           {product.alternateImages.map((image, index) => (

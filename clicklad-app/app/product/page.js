@@ -5,7 +5,7 @@ import Layout from '../layout';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import ProductList from '../../components/ProductList';
-import productsData from '../../components/jsons/product.json'; // Assuming your JSON file is in the same directory
+import productsData from '../../components/jsons/product.json';
 import styles from './page.module.css'; // Import your CSS module
 
 export default function Product() {

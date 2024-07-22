@@ -38,9 +38,9 @@
     "description": "Description of Product 3",
     "image": "/SlideshowImages/Slideshow-1.png",
     "colors": [
-      { "title": "wood1", "image": "/materials/wood1.png" },
-      { "title": "wood1", "image": "/materials/wood2.png" },
-      { "title": "wood1", "image": "/materials/wood3.png" }
+      { "title": "Mahogany", "image": "/materials/wood1.png" },
+      { "title": "Birch", "image": "/materials/wood2.png" },
+      { "title": "Redwood", "image": "/materials/wood3.png" }
     ], 
     "alternateImages": [
       "/SlideshowImages/Slideshow-5.png",
@@ -55,9 +55,9 @@
     "description": "Description of Product 4",
     "image": "/SlideshowImages/Slideshow-7.png",
     "colors": [
-      { "title": "wood1", "image": "/materials/wood1.png" },
-      { "title": "wood1", "image": "/materials/wood2.png" },
-      { "title": "wood1", "image": "/materials/wood3.png" }
+      { "title": "Mahogany", "image": "/materials/wood1.png" },
+      { "title": "Birch", "image": "/materials/wood2.png" },
+      { "title": "Redwood", "image": "/materials/wood3.png" }
     ], 
     "alternateImages": [
       "/SlideshowImages/Slideshow-1.png",
@@ -73,9 +73,9 @@
       "discount": 50,
       "image": "/SlideshowImages/Slideshow-6.png",
       "colors": [
-      { "title": "wood1", "image": "/materials/wood1.png" },
-      { "title": "wood1", "image": "/materials/wood2.png" },
-      { "title": "wood1", "image": "/materials/wood3.png" }
+      { "title": "Mahogany", "image": "/materials/wood1.png" },
+      { "title": "Birch", "image": "/materials/wood2.png" },
+      { "title": "Redwood", "image": "/materials/wood3.png" }
       ], 
       "alternateImages": [
         "/SlideshowImages/Slideshow-5.png",
