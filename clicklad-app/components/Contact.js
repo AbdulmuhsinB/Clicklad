@@ -1,11 +1,50 @@
 'use client';
-// Contact.js
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import styles from './Contact.module.css';
 
 const Contact = () => {
+    const [isInfoVisible, setInfoVisible] = useState(false);
+    const [isFormVisible, setFormVisible] = useState(false);
+    const infoRef = useRef(null);
+    const formRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target === infoRef.current) {
+                            setInfoVisible(true);
+                        } else if (entry.target === formRef.current) {
+                            setFormVisible(true);
+                        }
+                    }
+                });
+            },
+            {
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            }
+        );
+
+        if (infoRef.current) {
+            observer.observe(infoRef.current);
+        }
+        if (formRef.current) {
+            observer.observe(formRef.current);
+        }
+
+        return () => {
+            if (infoRef.current) {
+                observer.unobserve(infoRef.current);
+            }
+            if (formRef.current) {
+                observer.unobserve(formRef.current);
+            }
+        };
+    }, []);
+
     async function handleSubmit(e) {
         e.preventDefault();
 
@@ -32,7 +71,10 @@ const Contact = () => {
 
     return (
         <div className={styles.contactContainer}>
-            <div className={styles.contactInfo}>
+            <div
+                className={`${styles.contactInfo} ${isInfoVisible ? styles.visible : ''}`}
+                ref={infoRef}
+            >
                 <div className={styles.contactText}>
                     <h2 className={styles.heading}>Contact Us</h2>
                     <p className={styles.description}>
@@ -42,7 +84,10 @@ const Contact = () => {
                     </p>
                 </div>
             </div>
-            <div className={styles.contactForm}>
+            <div
+                className={`${styles.contactForm} ${isFormVisible ? styles.visible : ''}`}
+                ref={formRef}
+            >
                 <form onSubmit={handleSubmit}>
                     <div className={styles.formGroup}>
                         <input type="text" id="name" name="name" placeholder="Enter Your Name" className={styles.inputField} required />

@@ -1,5 +1,3 @@
-/* Contact.module.css */
-
 .contactContainer {
     display: flex;
     background-color: #EDEDE9;
@@ -14,17 +12,29 @@
     align-items: center;
     margin-left: 150px; /* Adjust as needed */
     margin-bottom: 60px;
-}
-
-.contactText {
-    color: #414833;
-    text-align: left;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .contactForm {
     flex: 1; /* Adjust flex value for responsiveness */
     padding: 20px;
     margin-right: 100px; /* Adjust as needed */
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.contactInfo.visible,
+.contactForm.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contactText {
+    color: #414833;
+    text-align: left;
 }
 
 .heading {
