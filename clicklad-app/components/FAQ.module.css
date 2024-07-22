@@ -1,0 +1,87 @@
+.container {
+    background-color: #EDEDE9;
+    padding: 20px;
+    padding-top: 100px;
+    color: #414833;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+  }
+  
+  .faqList {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  
+  .faqItem {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+    font-size: 20px;
+  }
+  
+  .faqItem:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .questionContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .question {
+    font-weight: bold;
+  }
+  
+  .answer {
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: transform 0.3s;
+    margin-left: 15px;
+    
+  }
+  
+  .stick1,
+  .stick2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background-color: black;
+    transform-origin: center;
+    transition: transform 0.3s;
+  }
+  
+  .stick1 {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  
+  .stick2 {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  
+  .expanded .stick1 {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+  
+  .expanded .stick2 {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+  
