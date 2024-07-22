@@ -107,22 +107,20 @@
 @media (max-width: 1200px) {
     .contactContainer {
         flex-direction: column;
-        align-items: center;
-        padding: 20px;
+        padding: 10px;
+        padding-top: 50px;
     }
 
     .contactContent {
         margin-right: 0;
         margin-bottom: 30px;
+        font-size: 20px;
     }
 
     .contactImage {
         display: none;
     }
 
-    .contactText {
-        text-align: center;
-    }
 
     .formGroup {
         flex-direction: column;
