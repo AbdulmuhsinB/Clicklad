@@ -37,7 +37,9 @@ const InformationSection = () => {
               <div className={styles.statTitle}>AWARDS WON</div>
             </div>
           </div>
+          <a href='/contact'>
           <button className={styles.contactButton}>Contact Us</button>
+          </a>
         </div>
       </div>
     </section>

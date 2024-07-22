@@ -6,7 +6,7 @@ import LocationList from '../../components/LocationList';
 import LocationData from '../../components/jsons/locations.json';
 import styles from './page.module.css';
 
-export default function Product() {
+export default function Location() {
   return (
     <Layout>
       <Navbar />

@@ -9,7 +9,7 @@ export default function Navbar() {
           <img src="/logo.png" alt="Logo" className={styles.navbarLogo} />
         </a>
         <div className={styles.navbarLinks}>
-          <a href="#about-us">About Us</a>
+          <a href="/about-us">About Us</a>
           <a href="/product">Products</a>
           <a href="/location">Locations</a>
           <a href="/FAQ">FAQs</a>
