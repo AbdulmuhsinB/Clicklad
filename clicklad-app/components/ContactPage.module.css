@@ -1,9 +1,9 @@
 .contactContainer {
     display: flex;
     background-color: #EDEDE9;
-    padding: 50px;
     overflow: hidden;
     margin: -8px;
+    padding-top: 40px;
 }
 
 .contactContent {
@@ -15,16 +15,12 @@
 }
 
 .contactImage {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 4px 0px;
 }
 
 .contactImage img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    border-radius: 8px;
 }
 
 .contactInfo {
@@ -34,10 +30,11 @@
 .contactText {
     color: #414833;
     text-align: left;
+    margin-left: 10%;
 }
 
 .contactForm {
-    padding: 20px;
+    padding: 0px 10%;
 }
 
 .heading {
@@ -49,7 +46,18 @@
 .description {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    line-height: 1.6;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .formGroup {
@@ -96,7 +104,7 @@
     background-color: #2E382E;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .contactContainer {
         flex-direction: column;
         align-items: center;
@@ -109,7 +117,7 @@
     }
 
     .contactImage {
-        margin-bottom: 30px;
+        display: none;
     }
 
     .contactText {
