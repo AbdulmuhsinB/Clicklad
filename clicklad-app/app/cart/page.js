@@ -12,6 +12,7 @@ class Cart extends Component {
     super(props);
     this.state = {
       cart: [],
+      products: [],
       formData: {
         firstName: '',
         lastName: '',
@@ -28,37 +29,8 @@ class Cart extends Component {
   componentDidMount() {
     if (typeof window !== 'undefined') {
       const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
-      const uniqueCart = this.getUniqueCart(storedCart);
-      this.setState({ cart: this.mergeCartWithProducts(uniqueCart) });
+      this.setState({ cart: storedCart, products: productsData });
     }
-  }
-
-  getUniqueCart(cart) {
-    const uniqueItems = [];
-    const itemSet = new Set();
-
-    cart.forEach((item) => {
-      const identifier = `${item.color}-${item.id}`;
-      if (!itemSet.has(identifier)) {
-        itemSet.add(identifier);
-        uniqueItems.push(item);
-      }
-    });
-
-    return uniqueItems;
-  }
-
-  mergeCartWithProducts(cart) {
-    return cart.map(cartItem => {
-      const product = productsData.find(product => product.id === cartItem.id);
-      const colorData = product.colors.find(color => color.title === cartItem.color) || {};
-      return {
-        ...cartItem,
-        name: product.name,
-        image: product.image,
-        colorImage: colorData.image,
-      };
-    });
   }
 
   handleInputChange = (e) => {
@@ -83,8 +55,27 @@ class Cart extends Component {
     localStorage.setItem('cart', JSON.stringify(updatedCart));
   };
 
+  getProductMainImage = (id, colorTitle) => {
+    const { products } = this.state;
+    const product = products.find(p => p.id === id);
+    if (product) {
+      const color = product.colors.find(c => c.title === colorTitle);
+      return color ? color.mainImage : '';
+    }
+    return '';
+  };
+
+  getProductNameById = (id) => {
+    const { products } = this.state;
+    const product = products.find(p => p.id === id);
+    return product ? product.name : 'Unknown Product';
+  };
+
   formatCartItems = (cart) => {
-    return cart.map(item => `Name: ${item.name}, Color: ${item.color}, ID: ${item.id}`).join('\n');
+    return cart.map(item => {
+      const productName = this.getProductNameById(item.id);
+      return `Name: ${productName}, Color: ${item.color}, ID: ${item.id}`;
+    }).join('\n');
   };
 
   handleSubmit = async (e) => {
@@ -159,9 +150,9 @@ class Cart extends Component {
                   {cart.map((item, index) => (
                     <React.Fragment key={index}>
                       <div className={styles['cart-item']}>
-                        <img src={item.image} alt={item.name} className={styles['cart-item-image']} />
+                        <img src={this.getProductMainImage(item.id, item.color)} alt={item.name} className={styles['cart-item-image']} />
                         <div className={styles['cart-item-details']}>
-                          <h3>{item.name}</h3>
+                          <h3>{this.getProductNameById(item.id)}</h3>
                           <p>Color: <span className={styles['highlighted']}>{item.color}</span></p>
                           <p>SKU: <span className={styles['highlighted']}>{item.id}</span></p>
                         </div>
@@ -215,11 +206,10 @@ class Cart extends Component {
                   <input type="text" name="city" value={formData.city} onChange={this.handleInputChange} required />
                 </label>
                 <label>
-                  Province
+                  Province/State
                   <input type="text" name="province" value={formData.province} onChange={this.handleInputChange} required />
                 </label>
-                <div className={styles['gap']}></div>
-                <button type="submit" className={styles['submit-button']}>Submit Order</button>
+                <button className={styles['submit-button']} type="submit">Submit</button>
               </form>
             </div>
           </div>

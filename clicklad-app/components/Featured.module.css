@@ -1,5 +1,3 @@
-/* components/featured.module.css */
-
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -9,7 +7,7 @@
   }
 }
 
-.featured{
+.featured {
   background-color: #414833;
   color: #FCF8F5;
   padding: 20px;
@@ -17,14 +15,13 @@
   margin: -8px;
 }
 
-.heading{
+.heading {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
-
 }
 
-.description{
+.description {
   font-size: 1.5rem;
   margin-bottom: 30px;
 }
@@ -63,7 +60,7 @@
 
 .logosSlide {
   display: inline-block;
-  animation: 25s slide infinite linear;
+  animation: 35s slide infinite linear; /* Adjusted for smoothness with 11 images */
 }
 
 .logosSlide img {

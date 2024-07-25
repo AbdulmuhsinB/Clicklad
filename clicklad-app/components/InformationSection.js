@@ -40,7 +40,7 @@ const InformationSection = () => {
         <div className={styles.imageContainer}>
           <img
             ref={imageRef}
-            src="/Home-Page/House.jpg"
+            src="/Home-Page/323 Huntly drive.jpg"
             alt="Innovative Aluminum Solutions"
             className={`${styles.image} ${isImageVisible ? styles.visible : ''}`} // Add visible class if isVisible is true
           />

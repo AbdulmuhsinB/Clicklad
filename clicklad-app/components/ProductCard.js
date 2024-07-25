@@ -1,11 +1,12 @@
-// components/ProductCard.js
-
 import React from 'react';
 import styles from './ProductCard.module.css';
 
 const ProductCard = ({ product, onClick }) => {
+  // Get the main image of the first color
+  const firstColorImage = product.colors[0]?.mainImage;
+
   const backgroundImageStyle = {
-    backgroundImage: `url(${product.image})`,
+    backgroundImage: `url(${firstColorImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     position: 'relative', 
