@@ -14,7 +14,6 @@
 - Completed the About Us Page
   
 ## In Progress
-- Product Detail page, needs the color to switch spots with the main image, so u can view things in different colors
 - Make the Home page more responsive
 - animataion needs to be given to the about us page 
 
