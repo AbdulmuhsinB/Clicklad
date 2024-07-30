@@ -5,13 +5,14 @@
   align-items: center;
   width: 100%;
   background-color: white;
-  padding: 20px 20px;
+  padding: 15px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: -8px;
   overflow: hidden;
   z-index: 1000;
   position: fixed;
-  font-size: 18px;
+  font-size: 20px;
+  padding-top: 30px;
 }
 
 .hamburgerIcon {
@@ -61,15 +62,44 @@
 }
 
 .cartIcon {
-  height: 15px;
+  height: 25px;
   margin-left: 5px;
   flex-shrink: 0;
   margin-right: 20px;
 }
 
+.cartCircle {
+  position: absolute;
+  background-color: #8E3200;
+  color: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  font-size: 13px;
+  right: 50px;
+  top: 30px;
+}
+
+.cartCircle span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 @media (max-width: 768px) {
+  .cartCircle {
+    right: 65px;
+    top: 20px;
+    height: 18px;
+    width: 18px;
+    font-size: 12px;
+  }
+
   .navbar {
     padding: 10px;
+    padding-top: 20px;
   }
 
   .navbarLinks {

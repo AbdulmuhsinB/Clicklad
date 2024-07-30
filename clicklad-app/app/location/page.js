@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../layout';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import LocationList from '../../components/LocationList';
@@ -8,12 +7,12 @@ import styles from './page.module.css';
 
 export default function Location() {
   return (
-    <Layout>
+    <>
       <Navbar />
       <div className={styles.page}>
         <LocationList locationData={LocationData} />
       </div>
       <Footer />
-    </Layout>
+    </>
   );
 }

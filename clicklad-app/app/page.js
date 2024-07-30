@@ -1,5 +1,4 @@
 // app/page.js
-import Layout from '../app/layout';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Info from '../components/InformationSection'
@@ -11,13 +10,13 @@ import Contact from '../components/Contact';
 
 export default function Home() {
   return (
-    <Layout>
+    <>
         <Navbar />
         <Hero />
         <Info />
         <Featured />
         <Contact />
         <Footer/>
-    </Layout>
+    </>
   );
 }

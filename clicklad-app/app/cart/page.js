@@ -1,8 +1,6 @@
 'use client';
-
 import React, { Component } from 'react';
 import styles from './page.module.css';
-import Layout from '../layout';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import productsData from '../../components/jsons/product.json'; // Ensure the path to your product.json is correct
@@ -46,6 +44,8 @@ class Cart extends Component {
   handleClearCart = () => {
     localStorage.removeItem('cart');
     this.setState({ cart: [] });
+    // Dispatch a storage event to notify other components
+    window.dispatchEvent(new Event('storage'));
   };
 
   handleRemoveItem = (index) => {
@@ -53,6 +53,8 @@ class Cart extends Component {
     updatedCart.splice(index, 1);
     this.setState({ cart: updatedCart });
     localStorage.setItem('cart', JSON.stringify(updatedCart));
+    // Dispatch a storage event to notify other components
+    window.dispatchEvent(new Event('storage'));
   };
 
   getProductMainImage = (id, colorTitle) => {
@@ -124,7 +126,7 @@ class Cart extends Component {
     const { cart, formData } = this.state;
 
     return (
-      <Layout>
+      <>
         <Navbar />
         <div className={styles['Checkout-nav']}>
           <div className={styles['checkout-banner']}>
@@ -189,7 +191,7 @@ class Cart extends Component {
                 </label>
                 <label>
                   Phone Number
-                  <input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={this.handleInputChange} required />
+                  <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={this.handleInputChange} required />
                 </label>
                 <div className={styles['gap']}></div>
                 <h2>Shipping Address</h2>
@@ -206,16 +208,18 @@ class Cart extends Component {
                   <input type="text" name="city" value={formData.city} onChange={this.handleInputChange} required />
                 </label>
                 <label>
-                  Province/State
+                  Province
                   <input type="text" name="province" value={formData.province} onChange={this.handleInputChange} required />
                 </label>
-                <button className={styles['submit-button']} type="submit">Submit</button>
+                <button type="submit" className={styles['submit-button']}>
+                  Submit Order
+                </button>
               </form>
             </div>
           </div>
         </div>
         <Footer />
-      </Layout>
+      </>
     );
   }
 }

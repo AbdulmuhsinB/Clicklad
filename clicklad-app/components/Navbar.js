@@ -1,9 +1,27 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    // Function to update cart count from localStorage
+    const updateCartCount = () => {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      setCartCount(cart.length);
+    };
+
+    updateCartCount(); // Initial update
+
+    // Event listener to update count when cart changes
+    window.addEventListener('storage', updateCartCount);
+
+    return () => {
+      window.removeEventListener('storage', updateCartCount);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -25,6 +43,11 @@ export default function Navbar() {
       </div>
       <a href="/cart" className={styles.cartLink}>
         Cart
+        {cartCount > 0 && (
+          <div className={styles.cartCircle}>
+            <span>{cartCount}</span>
+          </div>
+        )}
         <img src="/icons/cart-icon.png" alt="Cart" className={styles.cartIcon} />
       </a>
       <img 

@@ -19,24 +19,28 @@ const ProductDetail = ({ product }) => {
     const selectedColor = product.colors[selectedColorIndex];
     const selectedItem = {
       id: product.id,
-      color: selectedColor.title, // Store only id and color.title
+      color: selectedColor.title,
     };
-
+  
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const existingItemIndex = cart.findIndex(
       (item) =>
         item.id === selectedItem.id &&
         item.color === selectedItem.color
     );
-
+  
     if (existingItemIndex === -1) {
       cart.push(selectedItem);
       localStorage.setItem('cart', JSON.stringify(cart));
       alert('Product added to cart!');
+      
+      // Dispatch a custom event to update the cart count
+      window.dispatchEvent(new Event('storage'));
     } else {
       alert('Product already in cart!');
     }
   };
+  
 
   return (
     <div className={styles['product-detail']}>
