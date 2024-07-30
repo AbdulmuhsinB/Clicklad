@@ -9,7 +9,7 @@ const ProductCard = ({ product, onClick }) => {
     backgroundImage: `url(${firstColorImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    position: 'relative', 
+    position: 'relative',
   };
 
   const handleClick = () => {
@@ -18,10 +18,12 @@ const ProductCard = ({ product, onClick }) => {
 
   return (
     <div className={styles['product-card']} onClick={handleClick}>
-      <div className={styles['product-image']} style={backgroundImageStyle}>
-      </div>
+      <div className={styles['product-image']} style={backgroundImageStyle}></div>
       <div className={styles['product-content']}>
         <div className={styles['product-name']}>{product.name}</div>
+        <button className={styles['view-button']}>
+          View Product
+        </button>
       </div>
     </div>
   );

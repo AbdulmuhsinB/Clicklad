@@ -7,6 +7,7 @@ const ProductDetail = ({ product }) => {
 
   useEffect(() => {
     setMainImage(product.colors[0].mainImage);
+    window.scrollTo(0, 0); // Scrolls to the top of the page
   }, [product]);
 
   const handleColorClick = (index) => {
@@ -53,12 +54,47 @@ const ProductDetail = ({ product }) => {
       </div>
       <div className={styles['details-section']}>
         <h2 className={styles['product-name']}>{product.name}</h2>
-        <p className={styles['product-description']}>{product.description}</p>
+        <table className={styles['product-info-table']}>
+          <tbody>
+            <tr>
+              <td>SKU</td>
+              <td>{product.id}</td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td>{product.description}</td>
+            </tr>
+            <tr>
+              <td>Standard Size</td>
+              <td>{product['standard-size']}</td>
+            </tr>
+            <tr>
+              <td>Weight Per Unit</td>
+              <td>{product['weight-per-unit']}</td>
+            </tr>
+            <tr>
+              <td>Profile Size</td>
+              <td>
+                <table className={styles['profile-size-table']}>
+                  <tbody>
+                    <tr>
+                      <td>Inches</td>
+                      <td>{product['Profile Size'][0].inch}</td>
+                    </tr>
+                    <tr>
+                      <td>mm</td>
+                      <td>{product['Profile Size'][0].mm}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <hr className={styles['separator']} />
-
         <div className={styles['color-section']}>
           <p className={styles['product-description']}>
-            Colors: {product.colors[selectedColorIndex].title}
+            Color: {product.colors[selectedColorIndex].title}
           </p>
           <div className={styles['color-options']}>
             {product.colors.map((color, index) => (

@@ -1,32 +1,57 @@
 .product-list-wrapper {
   display: flex;
-  justify-content: center; /* Center the grid container horizontally */
-  padding: 20px; /* Optional: Add some padding around the grid */
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
   overflow: hidden;
+  margin-right: 50px; /* Add right margin to the wrapper */
+  width: calc(100% - 100px); /* Adjust width to account for the right margin */
+  box-sizing: border-box; /* Include padding and borders in width calculation */
 }
 
 .our-products {
-  color: #414833;
-  margin-bottom: 20px;
+  color: #8E3200;
   font-size: 40px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-align: center; /* Center the heading text */
+}
+
+.category-title {
+  color: #414833;
+  font-size: 30px;
+  padding: 10px;
+  padding-left: 100px;
+  text-align: center; /* Center the category title text */
+  width: 100%; /* Ensure it spans the full width of the parent */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .product-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Default: 4 cards per row on desktop */
-  gap: 20px; /* Adjust gap between cards as needed */
-  max-width: 1200px; /* Optional: Limit the maximum width of the grid container */
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row on desktop */
+  gap: 15px;
+  max-width: 1200px; /* Maximum width for the grid */
+  width: 100%; /* Ensure the grid takes full width of the wrapper */
+  box-sizing: border-box; /* Include padding and borders in width calculation */
+}
 
-  /* Responsive adjustments */
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row on tablets */
+@media (max-width: 1200px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+  }
+  .product-list-wrapper {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: 1fr; /* 1 card per row on mobile devices */
   }
 
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on mobile devices */
-  }
-
-  @media (max-width: 480px) {
-    grid-template-columns: 1fr; /* 1 card per row on smaller mobile devices */
+  .category-title{
+    padding-left: 0px;
+    font-size: 25px;
   }
 }

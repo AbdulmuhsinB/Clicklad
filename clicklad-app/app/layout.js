@@ -14,8 +14,10 @@ const Layout = ({ children }) => (
       {/* Other meta tags can be added here */}
     </Head>
     <html lang="en">
-      <body>
-        {children}
+      <body style={{ backgroundColor: '#414833'}}>
+        <div>
+          {children}
+        </div>
       </body>
     </html>
   </>
