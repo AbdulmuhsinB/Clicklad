@@ -57,15 +57,12 @@ class Cart extends Component {
     window.dispatchEvent(new Event('storage'));
   };
 
-  getProductMainImage = (id, colorTitle) => {
+  getProductMainImage = (id) => {
     const { products } = this.state;
     const product = products.find(p => p.id === id);
-    if (product) {
-      const color = product.colors.find(c => c.title === colorTitle);
-      return color ? color.mainImage : '';
-    }
-    return '';
+    return product ? product.productImage : '';
   };
+  
 
   getProductNameById = (id) => {
     const { products } = this.state;
@@ -152,10 +149,15 @@ class Cart extends Component {
                   {cart.map((item, index) => (
                     <React.Fragment key={index}>
                       <div className={styles['cart-item']}>
-                        <img src={this.getProductMainImage(item.id, item.color)} alt={item.name} className={styles['cart-item-image']} />
+                        <img 
+                          src={this.getProductMainImage(item.id)} 
+                          alt={this.getProductNameById(item.id)} 
+                          className={styles['cart-item-image']} 
+                        />
                         <div className={styles['cart-item-details']}>
                           <h3>{this.getProductNameById(item.id)}</h3>
                           <p>Color: <span className={styles['highlighted']}>{item.color}</span></p>
+                          <p>Size: <span className={styles['highlighted']}>{item.size}</span></p>  {/* Display size */}
                           <p>SKU: <span className={styles['highlighted']}>{item.id}</span></p>
                         </div>
                         <button className={styles['remove-item']} onClick={() => this.handleRemoveItem(index)}>
@@ -165,6 +167,7 @@ class Cart extends Component {
                       <hr className={styles['cart-item-divider']} />
                     </React.Fragment>
                   ))}
+
                 </div>
               )}
               <a href="/product" className={styles['cart-footer']}>

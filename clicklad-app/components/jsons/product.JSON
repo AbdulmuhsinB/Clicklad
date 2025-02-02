@@ -5,6 +5,11 @@
     "description": "Description of Product 1",
     "standard-size": "3.3′ x 1m",
     "weight-per-unit": "lb / kg",
+    "unit-weight": "value",
+    "finish": "Woodgrain",
+    "sizes": ["3\"", "4\"", "6\""],
+    "price": "25",
+    "productImage": "/Products/Teak.png",
     "Profile Size": [
       {
         "inch": "1.89 x 0.611 x 0.06t",
@@ -12,33 +17,7 @@
       }
     ],
     "category": "Siding",
-    "colors": [
-      {
-        "title": "Antique",
-        "mainImage": "/Products/Antique.png",
-        "thumbnail": "/materials/Antique.png"
-      },
-      {
-        "title": "Charcoal",
-        "mainImage": "/Products/Charcoal.png",
-        "thumbnail": "/materials/Charcoal.png"
-      },
-      {
-        "title": "Teak",
-        "mainImage": "/Products/Teak.png",
-        "thumbnail": "/materials/Teak.png"
-      },
-      {
-        "title": "Ipe",
-        "mainImage": "/Products/Ipe.png",
-        "thumbnail": "/materials/Ipe.jpg"
-      },
-      {
-        "title": "Red Cedar",
-        "mainImage": "/Products/red-cedar.png",
-        "thumbnail": "/materials/red-cedar.jpg"
-      }
-    ]
+    "colors": ["Teak", "Ipe", "Red Cedar"]
   },
   {
     "id": 2,
@@ -46,6 +25,11 @@
     "description": "Description of Product 2",
     "standard-size": "3.3′ x 1m",
     "weight-per-unit": "lb / kg",
+    "unit-weight": "value",
+    "finish": "Solid-Color",
+    "sizes": ["3\"", "4\"", "5\""],
+    "price": "25",
+    "productImage": "/Products/Teak.png",
     "Profile Size": [
       {
         "inch": "1.89 x 0.611 x 0.06t",
@@ -53,33 +37,7 @@
       }
     ],
     "category": "Click Rails",
-    "colors": [
-      {
-        "title": "Charcoal",
-        "mainImage": "/Products/Charcoal.png",
-        "thumbnail": "/materials/Charcoal.png"
-      },
-      {
-        "title": "Antique",
-        "mainImage": "/Products/Antique.png",
-        "thumbnail": "/materials/Antique.png"
-      },
-      {
-        "title": "Teak",
-        "mainImage": "/Products/Teak.png",
-        "thumbnail": "/materials/Teak.png"
-      },
-      {
-        "title": "Ipe",
-        "mainImage": "/Products/Ipe.png",
-        "thumbnail": "/materials/Ipe.jpg"
-      },
-      {
-        "title": "Red Cedar",
-        "mainImage": "/Products/red-cedar.png",
-        "thumbnail": "/materials/red-cedar.jpg"
-      }
-    ]
+    "colors": ["Charcoal", "Antique", "Teak", "Ipe", "Red Cedar"]
   },
   {
     "id": 3,
@@ -87,6 +45,11 @@
     "description": "Description of Product 3",
     "standard-size": "3.3′ x 1m",
     "weight-per-unit": "lb / kg",
+    "unit-weight": "value",
+    "finish": "Woodgrain",
+    "sizes": ["4\"", "6\""],
+    "price": "25",
+    "productImage": "/Products/Teak.png",
     "Profile Size": [
       {
         "inch": "1.89 x 0.611 x 0.06t",
@@ -94,40 +57,39 @@
       }
     ],
     "category": "Siding",
-    "colors": [
-      {
-        "title": "Teak",
-        "mainImage": "/Products/Teak.png",
-        "thumbnail": "/materials/Teak.png"
-      },
-      {
-        "title": "Charcoal",
-        "mainImage": "/Products/Charcoal.png",
-        "thumbnail": "/materials/Charcoal.png"
-      },
-      {
-        "title": "Antique",
-        "mainImage": "/Products/Antique.png",
-        "thumbnail": "/materials/Antique.png"
-      },
-      {
-        "title": "Ipe",
-        "mainImage": "/Products/Ipe.png",
-        "thumbnail": "/materials/Ipe.jpg"
-      },
-      {
-        "title": "Red Cedar",
-        "mainImage": "/Products/red-cedar.png",
-        "thumbnail": "/materials/red-cedar.jpg"
-      }
-    ]
+    "colors": ["Teak", "Charcoal", "Antique", "Ipe", "Red Cedar"]
   },
   {
-    "id": 4,
-    "name": "PRODUCT 4",
-    "description": "Description of Product 4",
+    "id": 8,
+    "name": "PRODUCT 8",
+    "description": "Description of Product 8",
     "standard-size": "3.3′ x 1m",
     "weight-per-unit": "lb / kg",
+    "unit-weight": "value",
+    "finish": "Solid-Color",
+    "sizes": ["3\"", "4\"", "5\"", "6\""],
+    "price": "25",
+    "productImage": "/Products/Teak.png",
+    "Profile Size": [
+      {
+        "inch": "1.89 x 0.611 x 0.06t",
+        "mm": "48.1 x 15.52 x 1.5t"
+      }
+    ],
+    "category": "Siding",
+    "colors": ["Antique", "Charcoal", "Teak", "Ipe", "Red Cedar"]
+  },
+  {
+    "id": 9,
+    "name": "PRODUCT 9",
+    "description": "Description of Product 9",
+    "standard-size": "3.3′ x 1m",
+    "weight-per-unit": "lb / kg",
+    "unit-weight": "value",
+    "finish": "Woodgrain",
+    "sizes": ["3\"", "4\"", "6\""],
+    "price": "25",
+    "productImage": "/Products/Teak.png",
     "Profile Size": [
       {
         "inch": "1.89 x 0.611 x 0.06t",
@@ -135,40 +97,19 @@
       }
     ],
     "category": "Click Rails",
-    "colors": [
-      {
-        "title": "Ipe",
-        "mainImage": "/Products/Ipe.png",
-        "thumbnail": "/materials/Ipe.jpg"
-      },
-      {
-        "title": "Teak",
-        "mainImage": "/Products/Teak.png",
-        "thumbnail": "/materials/Teak.png"
-      },
-      {
-        "title": "Charcoal",
-        "mainImage": "/Products/Charcoal.png",
-        "thumbnail": "/materials/Charcoal.png"
-      },
-      {
-        "title": "Antique",
-        "mainImage": "/Products/Antique.png",
-        "thumbnail": "/materials/Antique.png"
-      },
-      {
-        "title": "Red Cedar",
-        "mainImage": "/Products/red-cedar.png",
-        "thumbnail": "/materials/red-cedar.jpg"
-      }
-    ]
+    "colors": ["Charcoal", "Antique", "Teak", "Ipe", "Red Cedar"]
   },
   {
-    "id": 5,
-    "name": "PRODUCT 5",
-    "description": "Description of Product 5",
+    "id": 10,
+    "name": "PRODUCT 10",
+    "description": "Description of Product 10",
     "standard-size": "3.3′ x 1m",
     "weight-per-unit": "lb / kg",
+    "unit-weight": "value",
+    "finish": "Solid-Color",
+    "sizes": ["3\"", "4\"", "5\"", "6\""],
+    "price": "25",
+    "productImage": "/Products/Teak.png",
     "Profile Size": [
       {
         "inch": "1.89 x 0.611 x 0.06t",
@@ -176,237 +117,6 @@
       }
     ],
     "category": "Siding",
-    "colors": [
-      {
-        "title": "Red Cedar",
-        "mainImage": "/Products/red-cedar.png",
-        "thumbnail": "/materials/red-cedar.jpg"
-      },
-      {
-        "title": "Ipe",
-        "mainImage": "/Products/Ipe.png",
-        "thumbnail": "/materials/Ipe.jpg"
-      },
-      {
-        "title": "Teak",
-        "mainImage": "/Products/Teak.png",
-        "thumbnail": "/materials/Teak.png"
-      },
-      {
-        "title": "Charcoal",
-        "mainImage": "/Products/Charcoal.png",
-        "thumbnail": "/materials/Charcoal.png"
-      },
-      {
-        "title": "Antique",
-        "mainImage": "/Products/Antique.png",
-        "thumbnail": "/materials/Antique.png"
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "name": "PRODUCT 6",
-    "description": "Description of Product 6",
-    "standard-size": "3.3′ x 1m",
-    "weight-per-unit": "lb / kg",
-    "Profile Size": [
-      {
-        "inch": "1.89 x 0.611 x 0.06t",
-        "mm": "48.1 x 15.52 x 1.5t"
-      }
-    ],
-    "category": "Click Rails",
-    "colors": [
-      {
-        "title": "Antique",
-        "mainImage": "/Products/Antique.png",
-        "thumbnail": "/materials/Antique.png"
-      },
-      {
-        "title": "Charcoal",
-        "mainImage": "/Products/Charcoal.png",
-        "thumbnail": "/materials/Charcoal.png"
-      },
-      {
-        "title": "Teak",
-        "mainImage": "/Products/Teak.png",
-        "thumbnail": "/materials/Teak.png"
-      },
-      {
-        "title": "Ipe",
-        "mainImage": "/Products/Ipe.png",
-        "thumbnail": "/materials/Ipe.jpg"
-      },
-      {
-        "title": "Red Cedar",
-        "mainImage": "/Products/red-cedar.png",
-        "thumbnail": "/materials/red-cedar.jpg"
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "name": "PRODUCT 7",
-    "description": "Description of Product 7",
-    "standard-size": "3.3′ x 1m",
-    "weight-per-unit": "lb / kg",
-    "Profile Size": [
-      {
-        "inch": "1.89 x 0.611 x 0.06t",
-        "mm": "48.1 x 15.52 x 1.5t"
-      }
-    ],
-    "category": "Siding",
-    "colors": [
-      {
-        "title": "Charcoal",
-        "mainImage": "/Products/Charcoal.png",
-        "thumbnail": "/materials/Charcoal.png"
-      },
-      {
-        "title": "Antique",
-        "mainImage": "/Products/Antique.png",
-        "thumbnail": "/materials/Antique.png"
-      },
-      {
-        "title": "Teak",
-        "mainImage": "/Products/Teak.png",
-        "thumbnail": "/materials/Teak.png"
-      },
-      {
-        "title": "Ipe",
-        "mainImage": "/Products/Ipe.png",
-        "thumbnail": "/materials/Ipe.jpg"
-      },
-      {
-        "title": "Red Cedar",
-        "mainImage": "/Products/red-cedar.png",
-        "thumbnail": "/materials/red-cedar.jpg"
-      }
-    ]
-  },
-    {
-      "id": 8,
-      "name": "PRODUCT 8",
-      "description": "Description of Product 8",
-      "standard-size": "3.3′ x 1m",
-      "weight-per-unit": "lb / kg",
-      "Profile Size": [
-        {
-          "inch": "1.89 x 0.611 x 0.06t",
-          "mm": "48.1 x 15.52 x 1.5t"
-        }
-      ],
-      "category": "Siding",
-      "colors": [
-        {
-          "title": "Antique",
-          "mainImage": "/Products/Antique.png",
-          "thumbnail": "/materials/Antique.png"
-        },
-        {
-          "title": "Charcoal",
-          "mainImage": "/Products/Charcoal.png",
-          "thumbnail": "/materials/Charcoal.png"
-        },
-        {
-          "title": "Teak",
-          "mainImage": "/Products/Teak.png",
-          "thumbnail": "/materials/Teak.png"
-        },
-        {
-          "title": "Ipe",
-          "mainImage": "/Products/Ipe.png",
-          "thumbnail": "/materials/Ipe.jpg"
-        },
-        {
-          "title": "Red Cedar",
-          "mainImage": "/Products/red-cedar.png",
-          "thumbnail": "/materials/red-cedar.jpg"
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "name": "PRODUCT 9",
-      "description": "Description of Product 9",
-      "standard-size": "3.3′ x 1m",
-      "weight-per-unit": "lb / kg",
-      "Profile Size": [
-        {
-          "inch": "1.89 x 0.611 x 0.06t",
-          "mm": "48.1 x 15.52 x 1.5t"
-        }
-      ],
-      "category": "Click Rails",
-      "colors": [
-        {
-          "title": "Charcoal",
-          "mainImage": "/Products/Charcoal.png",
-          "thumbnail": "/materials/Charcoal.png"
-        },
-        {
-          "title": "Antique",
-          "mainImage": "/Products/Antique.png",
-          "thumbnail": "/materials/Antique.png"
-        },
-        {
-          "title": "Teak",
-          "mainImage": "/Products/Teak.png",
-          "thumbnail": "/materials/Teak.png"
-        },
-        {
-          "title": "Ipe",
-          "mainImage": "/Products/Ipe.png",
-          "thumbnail": "/materials/Ipe.jpg"
-        },
-        {
-          "title": "Red Cedar",
-          "mainImage": "/Products/red-cedar.png",
-          "thumbnail": "/materials/red-cedar.jpg"
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "name": "PRODUCT 10",
-      "description": "Description of Product 10",
-      "standard-size": "3.3′ x 1m",
-      "weight-per-unit": "lb / kg",
-      "Profile Size": [
-        {
-          "inch": "1.89 x 0.611 x 0.06t",
-          "mm": "48.1 x 15.52 x 1.5t"
-        }
-      ],
-      "category": "Siding",
-      "colors": [
-        {
-          "title": "Teak",
-          "mainImage": "/Products/Teak.png",
-          "thumbnail": "/materials/Teak.png"
-        },
-        {
-          "title": "Charcoal",
-          "mainImage": "/Products/Charcoal.png",
-          "thumbnail": "/materials/Charcoal.png"
-        },
-        {
-          "title": "Antique",
-          "mainImage": "/Products/Antique.png",
-          "thumbnail": "/materials/Antique.png"
-        },
-        {
-          "title": "Ipe",
-          "mainImage": "/Products/Ipe.png",
-          "thumbnail": "/materials/Ipe.jpg"
-        },
-        {
-          "title": "Red Cedar",
-          "mainImage": "/Products/red-cedar.png",
-          "thumbnail": "/materials/red-cedar.jpg"
-        }
-      ]
-    }  
+    "colors": ["Teak", "Charcoal", "Antique", "Ipe", "Red Cedar"]
+  }
 ]
