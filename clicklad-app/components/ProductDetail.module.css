@@ -119,7 +119,7 @@
 }
 
 .product-info-box {
-  margin-top: 20px;
+  margin: 20px 0px;
   border: 1px solid #414833;
   border-radius: 10px;
   display: flex;
@@ -131,7 +131,7 @@
 .info-item {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 0px 10px;
 }
 
 .profile-size {

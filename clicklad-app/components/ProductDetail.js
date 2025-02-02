@@ -105,6 +105,9 @@ const ProductDetail = ({ product }) => {
         </button>
         
       <div className={styles['product-info-box']}>
+      <div className={styles['info-item']} style={{ paddingTop: "8px" }}>
+        <span className={styles['info-title']}>Details </span>
+        </div>
           <div className={styles['info-item']}>
             <span className={styles['info-title']}>SKU: </span>
             <span className={styles['info-value']}>{product.id}</span>
@@ -118,13 +121,17 @@ const ProductDetail = ({ product }) => {
             <span className={styles['info-value']}>{product['standard-size']}</span>
           </div>
           <div className={styles['info-item']}>
-            <span className={styles['info-title']}>Weight Per Unit: </span>
+            <span className={styles['info-title']}>Unit Weight: </span>
             <span className={styles['info-value']}>{product['weight-per-unit']}</span>
+          </div>
+          <div className={styles['info-item']}>
+            <span className={styles['info-title']}>Finish: </span>
+            <span className={styles['info-value']}>{product['finish']}</span>
           </div>
           <div className={styles['info-item']}>
             <span className={styles['info-title']}>Profile Size: </span>
             </div>
-          <div className={styles['info-item']}>
+          <div className={styles['info-item']} style={{ paddingBottom: "8px" }}>
             <div className={styles['profile-size']}>
               <span>
                 <span className={styles['info-value']}>Inches: {product['Profile Size'][0].inch}</span>
