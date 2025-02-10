@@ -51,24 +51,27 @@ const ProductDetail = ({ product }) => {
       <a href="/product" className={styles['back-button']}>
         <img src="/icons/back-icon.png" alt="Continue shopping" />
       </a>
-      <div className={styles['image-section']}>
-        <div className={styles['main-image-container']}>
-          <img
-            src={product.productImage}
-            alt={product.name}
-            className={styles['main-image']}
-          />
-        </div>
-      </div>
+
+      {/* Details Section */}
       <div className={styles['details-section']}>
-      <div className={styles['product-header']}>
-        <h2 className={styles['product-name']}>{product.name}</h2>
-        <h2 className={styles['product-price']}>${product.price}</h2>
-      </div>
-      <p className={styles['product-description']}>{product.description}</p>
-      
-      <div className={styles['product-header']}>
-        <div className={styles['dropdown-section']}>
+        <div className={styles['image-section']}>
+          <div className={styles['main-image-container']}>
+            <img
+              src={product.productImage}
+              alt={product.name}
+              className={styles['main-image']}
+            />
+          </div>
+        </div>
+
+        <div className={styles['product-info']}>
+          <div className={styles['product-header']}>
+            <h2 className={styles['product-name']}>{product.name}</h2>
+          </div>
+          <p className={styles['product-description']}>{product.description}</p>
+
+          <div className={styles['selection-section']}>
+            <div className={styles['dropdown-section']}>
               <label htmlFor="size" className={styles['dropdown-label']}>Size:</label>
               <select
                 id="size"
@@ -82,65 +85,81 @@ const ProductDetail = ({ product }) => {
                   </option>
                 ))}
               </select>
+            </div>
+            <div className={styles['dropdown-section']}>
+              <label htmlFor="color" className={styles['dropdown-label']}>Color:</label>
+              <select
+                id="color"
+                className={styles['dropdown']}
+                value={selectedColor}
+                onChange={handleColorChange}
+              >
+                {product.colors.map((color, index) => (
+                  <option key={index} value={color}>
+                    {color}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
-        <div className={styles['dropdown-section']}>
-            <label htmlFor="color" className={styles['dropdown-label']}>Color:</label>
-            <select
-              id="color"
-              className={styles['dropdown']}
-              value={selectedColor}
-              onChange={handleColorChange}
-            >
-              {product.colors.map((color, index) => (
-                <option key={index} value={color}>
-                  {color}
-                </option>
-              ))}
-            </select>
+
+          <button className={styles['add-to-cart-button']} onClick={addToCart}>
+            Add to Cart
+          </button>
+
+          <div className={styles['product-info-box']}>
+            <div className={styles['info-item']} style={{ paddingTop: "8px" }}>
+              <span className={styles['info-title']}>Details </span>
+            </div>
+            <div className={styles['info-item']}>
+              <span className={styles['info-title']}>SKU: </span>
+              <span className={styles['info-value']}>{product.id}</span>
+            </div>
+            <div className={styles['info-item']}>
+              <span className={styles['info-title']}>Description: </span>
+              <span className={styles['info-value']}>{product.description}</span>
+            </div>
+            <div className={styles['info-item']}>
+              <span className={styles['info-title']}>Standard Size: </span>
+              <span className={styles['info-value']}>{product['standard-size']}</span>
+            </div>
+            <div className={styles['info-item']}>
+              <span className={styles['info-title']}>Unit Weight: </span>
+              <span className={styles['info-value']}>{product['weight-per-unit']}</span>
+            </div>
+            <div className={styles['info-item']}>
+              <span className={styles['info-title']}>Finish: </span>
+              <span className={styles['info-value']}>{product['finish']}</span>
+            </div>
+            <div className={styles['info-item']}>
+              <span className={styles['info-title']}>Profile Size: </span>
+            </div>
+            <div className={styles['info-item']} style={{ paddingBottom: "8px" }}>
+              <div className={styles['profile-size']}>
+                <span>
+                  <span className={styles['info-value']}>Inches: {product['Profile Size'][0].inch}</span>
+                </span>
+                <span>
+                  <span className={styles['info-value']}>mm: {product['Profile Size'][0].mm}</span>
+                </span>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
 
-      <button className={styles['add-to-cart-button']} onClick={addToCart}>
-          Add to Cart
-        </button>
-        
-      <div className={styles['product-info-box']}>
-      <div className={styles['info-item']} style={{ paddingTop: "8px" }}>
-        <span className={styles['info-title']}>Details </span>
-        </div>
-          <div className={styles['info-item']}>
-            <span className={styles['info-title']}>SKU: </span>
-            <span className={styles['info-value']}>{product.id}</span>
-          </div>
-          <div className={styles['info-item']}>
-            <span className={styles['info-title']}>Description: </span>
-            <span className={styles['info-value']}>{product.description}</span>
-          </div>
-          <div className={styles['info-item']}>
-            <span className={styles['info-title']}>Standard Size: </span>
-            <span className={styles['info-value']}>{product['standard-size']}</span>
-          </div>
-          <div className={styles['info-item']}>
-            <span className={styles['info-title']}>Unit Weight: </span>
-            <span className={styles['info-value']}>{product['weight-per-unit']}</span>
-          </div>
-          <div className={styles['info-item']}>
-            <span className={styles['info-title']}>Finish: </span>
-            <span className={styles['info-value']}>{product['finish']}</span>
-          </div>
-          <div className={styles['info-item']}>
-            <span className={styles['info-title']}>Profile Size: </span>
+      {/* Features Section */}
+      <div className={styles['features-section']}>
+      <h3>Features</h3>
+
+        <div className={styles['features-container']}>
+          {product.features.map((feature, index) => (
+            <div key={index} className={styles['feature-box']}>
+              <img src={feature.icon} alt={feature.name} className={styles['feature-icon']} />
+              <h3 className={styles['feature-name']}>{feature.name}</h3>
+              <p className={styles['feature-description']}>{feature.description}</p>
             </div>
-          <div className={styles['info-item']} style={{ paddingBottom: "8px" }}>
-            <div className={styles['profile-size']}>
-              <span>
-                <span className={styles['info-value']}>Inches: {product['Profile Size'][0].inch}</span>
-              </span>
-              <span>
-                <span className={styles['info-value']}>mm: {product['Profile Size'][0].mm}</span>
-              </span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
