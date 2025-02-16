@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation'; // Import useRouter
 import styles from './ProductDetail.module.css';
 
-
-const ProductDetail = ({ product }) => {
+const ProductDetail = ({ product, allProducts }) => {
+  const router = useRouter(); // Initialize the router
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
 
@@ -45,6 +46,16 @@ const ProductDetail = ({ product }) => {
     } else {
       alert('Product already in cart!');
     }
+  };
+
+  // Get related products based on the current product's related IDs
+  const relatedProducts = product.related.map((relatedId) =>
+    allProducts.find((p) => p.id === relatedId)
+  );
+
+  // Handle navigation to a related product's page
+  const handleRelatedProductClick = (productId) => {
+    router.push(`/product/${productId}`); // Use router.push for navigation
   };
 
   return (
@@ -145,7 +156,28 @@ const ProductDetail = ({ product }) => {
           ))}
         </div>
       </div>
-    </div>    
+
+      {/* Related Products Section */}
+      <div className={styles['related-products-section']}>
+        <h3>Related Products</h3>
+        <div className={styles['related-products-container']}>
+          {relatedProducts.map((relatedProduct) => (
+            <div
+              key={relatedProduct.id}
+              className={styles['related-product-tile']}
+              onClick={() => handleRelatedProductClick(relatedProduct.id)} // Use onClick with router.push
+            >
+              <img
+                src={relatedProduct.productImage}
+                alt={relatedProduct.name}
+                className={styles['related-product-image']}
+              />
+              <p className={styles['related-product-name']}>{relatedProduct.name}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 
