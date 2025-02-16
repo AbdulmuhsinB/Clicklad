@@ -1,7 +1,11 @@
+'use client';
 import React from 'react';
+import { useRouter } from 'next/navigation'; // Correct for App Router
 import styles from './ProductCard.module.css';
 
-const ProductCard = ({ product, onClick }) => {
+const ProductCard = ({ product }) => {
+  const router = useRouter();
+
   const backgroundImageStyle = {
     backgroundImage: `url(${product.productImage})`,
     backgroundSize: 'cover',
@@ -10,7 +14,7 @@ const ProductCard = ({ product, onClick }) => {
   };
 
   const handleClick = () => {
-    onClick(product.id);
+    router.push(`/product/${product.id}`); // Correct App Router navigation
   };
 
   return (
@@ -18,7 +22,7 @@ const ProductCard = ({ product, onClick }) => {
       <div className={styles['product-image']} style={backgroundImageStyle}></div>
       <div className={styles['product-content']}>
         <div className={styles['product-name']}>{product.name}</div>
-        <button className={styles['view-button']}>
+        <button className={styles['view-button']} onClick={handleClick}>
           View Product
         </button>
       </div>
