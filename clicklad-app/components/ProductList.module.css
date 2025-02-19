@@ -1,10 +1,9 @@
 .product-list-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  align-items: flex-start;
   overflow: hidden;
-  margin-right: 50px; /* Add right margin to the wrapper */
+  margin-left: 100px; /* Add right margin to the wrapper */
   width: calc(100% - 100px); /* Adjust width to account for the right margin */
   box-sizing: border-box; /* Include padding and borders in width calculation */
 }
@@ -21,19 +20,48 @@
   color: #414833;
   font-size: 30px;
   padding: 10px;
-  padding-left: 100px;
-  text-align: center; /* Center the category title text */
+  text-align: left; /* Center the category title text */
   width: 100%; /* Ensure it spans the full width of the parent */
   box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .product-list {
+  align-items: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 cards per row on desktop */
-  gap: 15px;
+  gap: 20px;
   max-width: 1200px; /* Maximum width for the grid */
   width: 100%; /* Ensure the grid takes full width of the wrapper */
   box-sizing: border-box; /* Include padding and borders in width calculation */
+}
+
+.category-tags {
+  display: flex;
+  gap: 20px; /* 20px gap between buttons */
+  margin-bottom: 10px;
+  margin-left: 10px;
+  justify-content: center; /* Left-align the buttons */
+}
+
+.category-tag {
+  padding: 8px 16px;
+  background-color: #e2e2e2; /* Unselected background color */
+  border: 1px solid #414833; /* Border to match the theme */
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #414833; /* Unselected text color */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-tag:hover {
+  background-color: #414833; /* Hover background color */
+  color: #e2e2e2; /* Hover text color */
+}
+
+.category-tag.active {
+  background-color: #414833; /* Selected background color */
+  color: #e2e2e2; /* Selected text color */
 }
 
 @media (max-width: 1200px) {

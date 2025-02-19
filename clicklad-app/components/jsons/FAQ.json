@@ -1,39 +1,32 @@
 [
-    {
-      "id": 1,
-      "question": "What material should I put underneath so that the background of the gap will be black and waterproof?",
-      "answer": "The material that should go underneath for the clip with open gap is a wrapping material. It will make the background black. The wrapping brans we suggest is InvisiWrap SA. Check at the resources."
-    },
-    {
-        "id": 2,
-        "question": "Question 2",
-        "answer": "Answer 2"
-      },
-      {
-        "id": 3,
-        "question": "Question 3",
-        "answer": "Answer 3"
-      },
-      {
-        "id": 4,
-        "question": "Question 4",
-        "answer": "Answer 4"
-      },
-      {
-        "id": 5,
-        "question": "Question 5",
-        "answer": "Answer 5"
-      },
-      {
-        "id": 6,
-        "question": "Question 6",
-        "answer": "Answer 6"
-      },
-      
-    {
-      "id": 7,
-      "question": "Question 7",
-      "answer": "Answer 7"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "question": "Do I need strapping?",
+    "answer": "Our click rail system becomes your strapping. If you are installing the boards horizontally, you will not need strapping. If you are installing the boards vertically, if there is a concern for water getting behind the material, then we suggest adding strapping vertically, and then adding the railings horizontally."
+  },
+  {
+    "id": 2,
+    "question": "Do I need to screw in the boards?",
+    "answer": "You do not need to screw in any boards. Clicklad is a system that is engineered where you can achieve the look you want without any visible screws or nails (even on the last board)."
+  },
+  {
+    "id": 3,
+    "question": "Is Clicklad waterproof?",
+    "answer": "If you use our water tight profile, with the correct installation it is waterproof."
+  },
+  {
+    "id": 4,
+    "question": "Is Clicklad maintenance free?",
+    "answer": "Yes, our material is 100% maintenance free! It is made out of aluminum so you will never have to worry about repainting or the boards deteriorating."
+  },
+  {
+    "id": 5,
+    "question": "Where is the material stored?",
+    "answer": "We keep inventory at our head branch in Vaughan."
+  },
+  {
+    "id": 6,
+    "question": "What do I need to install?",
+    "answer": "For installation, you need a drill to screw the rails to your wall, and you will need a saw with the correct blade to cut aluminum. Installing the boards is super easy and it can be done all by hand."
+  }
+]

@@ -6,8 +6,13 @@ const ProductDetail = ({ product, allProducts }) => {
   const router = useRouter(); // Initialize the router
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
+  const [mainImage, setMainImage] = useState(product.productImage);
+  const [secondaryImage, setSecondaryImage] = useState(product.secondaryImage);
+
 
   useEffect(() => {
+    setMainImage(product.productImage);
+    setSecondaryImage(product.secondaryImage);  
     setSelectedColor(product.colors[0]);
     setSelectedSize(product.sizes[0]);
     window.scrollTo(0, 0); // Scrolls to the top of the page
@@ -15,6 +20,13 @@ const ProductDetail = ({ product, allProducts }) => {
 
   const handleColorChange = (event) => {
     setSelectedColor(event.target.value);
+  };
+  
+  const swapImages = () => {
+    setMainImage((prevMain) => {
+      setSecondaryImage(prevMain);
+      return secondaryImage;
+    });
   };
 
   const handleSizeChange = (event) => {
@@ -62,15 +74,24 @@ const ProductDetail = ({ product, allProducts }) => {
     <div className={styles['product-detail']}>
       {/* Details Section */}
       <div className={styles['details-section']}>
-        <div className={styles['image-section']}>
-          <div className={styles['main-image-container']}>
-            <img
-              src={product.productImage}
-              alt={product.name}
-              className={styles['main-image']}
-            />
-          </div>
+      <div className={styles['image-section']}>
+        <div className={styles['main-image-container']}>
+          <img
+            src={mainImage}
+            alt={product.name}
+            className={styles['main-image']}
+          />
         </div>
+        <div className={styles['secondary-image-container']}>
+          <img
+            src={secondaryImage}
+            alt="Secondary View"
+            className={styles['secondary-image']}
+            onClick={swapImages} // Click to swap images
+            style={{ cursor: 'pointer' }} // Indicates it's clickable
+          />
+        </div>
+      </div>
 
         <div className={styles['product-info']}>
           <div className={styles['product-header']}>
