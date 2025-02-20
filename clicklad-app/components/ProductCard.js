@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
       </div>
       <div className={styles['product-details']}>
         <h3 className={styles['product-name']}>{product.name}</h3>
-        <p className={styles['product-name']}>{product.sizes.length} SIZES</p>
+      {/*<p className={styles['product-name']}>{product.sizes.length} SIZES</p>*/}
       </div>
     </div>
   );

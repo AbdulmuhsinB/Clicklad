@@ -219,11 +219,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer; /* Change cursor to pointer on hover */
   position: relative; /* Needed for the overlay */
-  overflow: hidden; /* Ensure the overlay doesn't overflow */
-}
-
-.related-product-tile:hover .related-product-image {
-  opacity: 0.7; /* Reduce image opacity on hover */
+  
 }
 
 .related-product-tile:hover::after {
@@ -233,7 +229,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
   border-radius: 8px;
 }
 
