@@ -7,10 +7,9 @@ export default function AboutUs() {
       {/* Vision Section */}
       <div className={styles.container}>
         <div className={styles.column1}>
-          <h1 className={styles.title}>Our vision for progress and empowerment.</h1>
+          <h1 className={styles.title}>Maintenance Free</h1>
           <p className={styles.description}>
-            With over 25 years of experience in the field of aluminum, we have realized that today the modern world is showing a growing demand for quality aluminum products, which leads to the search for innovative and technological solutions; Clicklad™ is the answer to this requirement in interior or exterior design.
-          </p>
+          Clicklad is made from extruded aluminum and then powder coated using the highest standards to achieve premium solid and woodgrain finishes. We have perfected the manufacturing process guaranteeing industry leading performance in all weather. Once installed, you can enjoy it for many years to come without the worry of scratching or staining when compared to composite or pvc siding.          </p>
         </div>
         <div className={styles.column2}>
           <img src="/AboutUs-Page/vision.png" alt="Vision Image" className={styles.image} />
@@ -23,9 +22,9 @@ export default function AboutUs() {
           <img src="/AboutUs-Page/care.png" alt="Safety Image" className={styles.imageSafety} />
         </div>
         <div className={styles.columnSafety1}>
-          <h1 className={styles.titleSafety}>We care about your best safety.</h1>
+          <h1 className={styles.titleSafety}>Game Changer in the fluted panel look</h1>
           <p className={styles.descriptionSafety}>
-            Clicklad has been providing top-quality electrical services to the local community for over 15 years. Our team of licensed and experienced engineers are dedicated to delivering excellent quality products.
+          The fluted panel is a staple in the modern look for residential and commercial properties. Until clicklad, designers and home owners were limited to the standard 1” or 2” wide panel that was offered. With clicklad being the first fluted aluminum siding in the industry combined with our proprietary installation system, we've designed a range of profiles which allow you to mix and match, allowing designs with 1”, 2”, 3”, 4” and 6” flutes. 
           </p>
           <ul className={styles.list}>
             <li>
@@ -47,9 +46,9 @@ export default function AboutUs() {
       {/* Accessible Section */}
       <div className={styles.container}>
         <div className={styles.column1}>
-          <h1 className={styles.title}>Simple and accessible for all projects, no matter the size.</h1>
+          <h1 className={styles.title}>Is Clicklad eco-friendly</h1>
           <p className={styles.description}>
-            Clicklad™ was developed by the installation method in click which saves a lot of time in installing the product. The company’s goal today is to make aluminum products accessible to every home in Canada by the simplicity of the product and to make aluminum products more affordable to the general public.
+          Clicklad is made from 100% recycled aluminum 6063. The material is also 100% recycleable. Due to it's light weight, we are able to reduce shipping costs as well as fuel consumption, minimizing the carbon footprint it creates to transport it. Clicklad is a green product as you will never have to stain or add any harsh chemicals to it to maintain it. 
           </p>
         </div>
         <div className={styles.column2}>

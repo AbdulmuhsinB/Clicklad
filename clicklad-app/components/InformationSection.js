@@ -48,7 +48,7 @@ const InformationSection = () => {
         <div className={styles.textContainer}>
           <h1 className={styles.title}>Innovative Aluminum Products</h1>
           <p className={styles.description}>
-            <span className={styles.highlight}>Clicklad™</span> is a cladding material based on recycled aluminum that comes in a variety of sizes and cladding options. In the stages of thinking about the product, we were faced with several goals such as: installation time, product efficiency for weather conditions, system weight, and more. We are confident that we have managed to meet the requirements and challenges at the highest level.
+          Clicklad is redefining the aluminum cladding space by innovating the installation process, and allowing architects and designers to achieve unique looks that were once thought to be a challenge to achieve. With our proprietary mounting system, you are able to achieve a look that makes your project stand out. Aluminum is durable, maintenance free and is built to withstand the harsh Canadian weather
           </p>
           <div className={styles.stats}>
             <div className={styles.stat}>
