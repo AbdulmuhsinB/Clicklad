@@ -78,9 +78,7 @@ const Contact = () => {
                 <div className={styles.contactText}>
                     <h2 className={styles.heading}>Contact Us</h2>
                     <p className={styles.description}>
-                        123 Main Street, Toronto, ON, M3L 2J2<br />
-                        647-842-4782<br />
-                        info@clicklad.ca
+                    Phone: 416-885-7330
                     </p>
                 </div>
             </div>

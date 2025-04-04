@@ -52,6 +52,12 @@
     display: flex;
     margin-left: 200px;
   }
+  .columnSafety21 {
+    padding: 50px;
+    flex: 1;
+    display: flex;
+    margin-left: 200px;
+  }
 
   .columnWorker1 {
     flex: 1;
@@ -109,6 +115,13 @@
     padding: 20px;
     margin: 20px;
     width: 100%;
+  }
+  
+  .imageWorker{
+    padding: 20px;
+    margin: 20px;
+    width: 50%;
+    height: 500px;
   }
 
   .imageSafety {

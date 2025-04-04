@@ -78,7 +78,9 @@ const InformationSection = () => {
               <div className={styles.statTitle}>PRODUCTS & FINISHES</div>
             </div>
           </div>
-          <button className={styles.contactButton}>Contact Us</button>
+          <a href="/about-us">
+          <button className={styles.contactButton} href="/about-us">Contact Us</button>
+          </a>
         </div>
       </div>
     </section>

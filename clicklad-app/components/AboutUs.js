@@ -57,13 +57,13 @@ export default function AboutUs() {
       </div>
 
       {/* Worker Section */}
-      <div className={styles.workerContainer}>
-        <div className={styles.columnWorker2}>
-          <img src="/AboutUs-Page/worker.png" alt="Worker Image" className={styles.imageWorker} />
+      <div className={styles.safetyContainer}>
+        <div className={styles.columnSafety21}>
+          <img src="/SlideshowImages/6 _ teak C-010.jpeg" alt="Worker Image" className={styles.imageSafety} />
         </div>
-        <div className={styles.columnWorker1}>
-          <h1 className={styles.titleWorker}>Ready to upgrade your space?</h1>
-          <p className={styles.descriptionWorker}>
+        <div className={styles.columnSafety1}>
+          <h1 className={styles.titleSafety}>Ready to upgrade your space?</h1>
+          <p className={styles.descriptionSafety}>
             Contact our team today to schedule a free consultation and get a customized solution for your home or business.
           </p>
           <a href='/contact'><button className={styles.contactButton}>Contact Us</button></a>

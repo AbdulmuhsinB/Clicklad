@@ -4,7 +4,8 @@ import styles from './LocationList.module.css';
 const LocationList = ({ locationData }) => {
   return (
     <div className={styles.container}>
-      <h2 className={styles.pageTitle}>Find a Location Near You</h2>
+      <h1>HTTP 404 Error: Page Does Not Exist</h1>
+      {/* <h2 className={styles.pageTitle}>Find a Location Near You</h2>
       {locationData.map((provinceData, index) => (
         <div key={index} className={styles.provinceSection}>
           <h2 className={styles.provinceTitle}>{provinceData.province}</h2>
@@ -46,7 +47,7 @@ const LocationList = ({ locationData }) => {
             ))}
           </div>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };

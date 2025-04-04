@@ -1,178 +1,222 @@
-[
-  {
-    "id": 1,
-    "name": "Water Tight Cladding",
-    "description": "Description of Product 1",
-    "standard-size": "3.3′ x 1m",
-    "weight-per-unit": "lb / kg",
-    "unit-weight": "value",
-    "finish": "Woodgrain",
-    "sizes": ["6\"", "3\"", "4\"", "2\""],
-    "price": "25",
-    "productImage": "/ClickladProfilePhotos/C-010 6_ Water tight.jpg",
-    "secondaryImage": "/Products/Colors.png",
-    "Profile Size": [
-      {
-        "inch": "1.89 x 0.611 x 0.06t",
-        "mm": "48.1 x 15.52 x 1.5t"
-      }
-    ],
-    "category": "Siding",
-    "colors": ["Wenge", "Teak", "Black", "White Oak"],
-    "features": [
-      {
-        "icon": "/icons/maintenance.png",
-        "name": "Maintenance Free",
-        "description": "Once installed, Clicklad will never require any maintenance to maintain its rich look"
-      },
-      {
-        "icon": "/icons/rain.png", 
-        "name": "Scratch Resistant",
-        "description": "Clicklad is very durable and withstands scratches from other objects"
-      },
-      {
-        "icon": "/icons/fire.png", 
-        "name": "Non-Combustible",
-        "description": "Clicklad is non-combustible and can be installed where non-combustible material is required"
-      },
-      {
-        "icon": "/icons/recycle.png", 
-        "name": "Eco-Friendly",
-        "description": "Made from sustainable materials, reducing environmental impact."
-      }
-    ],
-    "related": [2, 3, 8,1]
-  },
-  {
-    "id": 2,
-    "name": "Tight Gap",
-    "description": "Description of Product 2",
-    "standard-size": "3.3′ x 1m",
-    "weight-per-unit": "lb / kg",
-    "unit-weight": "value",
-    "finish": "Solid-Color",
-    "sizes": ["4.7\""],
-    "price": "25",
-    "productImage": "/ClickladProfilePhotos/C-011 4.7_ Tight Gap.jpg",
-    "secondaryImage": "/Products/Colors.png",
-    "Profile Size": [
-      {
-        "inch": "1.89 x 0.611 x 0.06t",
-        "mm": "48.1 x 15.52 x 1.5t"
-      }
-    ],
-    "category": "Click Rails",
-    "colors": ["Wenge", "Teak", "Black", "White Oak"],
-    "features": [
-      {
-        "icon": "/icons/maintenance.png", 
-        "name": "Maintenance Free",
-        "description": "Once installed, Clicklad will never require any maintenance to maintain its rich look"
-      },
-      {
-        "icon": "/icons/rain.png",
-        "name": "Scratch Resistant",
-        "description": "Clicklad is very durable and withstands scratches from other objects"
-      },
-      {
-        "icon": "/icons/fire.png",
-        "name": "Non-Combustible",
-        "description": "Clicklad is non-combustible and can be installed where non-combustible material is required"
-      },
-      {
-        "icon": "/icons/recycle.png", 
-        "name": "Eco-Friendly",
-        "description": "Made from sustainable materials, reducing environmental impact."
-      }
-    ],
-    "related": [2, 3, 8,1]
-  },
-  {
-    "id": 3,
-    "name": "Open Joint",
-    "description": "Description of Product 3",
-    "standard-size": "3.3′ x 1m",
-    "weight-per-unit": "lb / kg",
-    "unit-weight": "value",
-    "finish": "Woodgrain",
-    "sizes": ["4\"", "1.2\"", "2\"", "3\""],
-    "price": "25",
-    "productImage": "/ClickladProfilePhotos/C-012 4_ Open Joint.jpg",
-    "secondaryImage": "/Products/Colors.png",
-    "Profile Size": [
-      {
-        "inch": "1.89 x 0.611 x 0.06t",
-        "mm": "48.1 x 15.52 x 1.5t"
-      }
-    ],
-    "category": "Siding",
-    "colors": ["Wenge", "Teak", "Black", "White Oak"],
-    "features": [
-      {
-        "icon": "/icons/maintenance.png", 
-        "name": "Maintenance Free",
-        "description": "Once installed, Clicklad will never require any maintenance to maintain its rich look"
-      },
-      {
-        "icon": "/icons/rain.png", 
-        "name": "Scratch Resistant",
-        "description": "Clicklad is very durable and withstands scratches from other objects"
-      },
-      {
-        "icon": "/icons/fire.png",
-        "name": "Non-Combustible",
-        "description": "Clicklad is non-combustible and can be installed where non-combustible material is required"
-      },
-      {
-        "icon": "/icons/recycle.png",
-        "name": "Eco-Friendly",
-        "description": "Made from sustainable materials, reducing environmental impact."
-      }
-    ],
-    "related": [2, 3, 8,1]
-  },
-  {
-    "id": 8,
-    "name": "Water Tight Locking Piece",
-    "description": "Description of Product 8",
-    "standard-size": "3.3′ x 1m",
-    "weight-per-unit": "lb / kg",
-    "unit-weight": "value",
-    "finish": "Solid-Color",
-    "sizes": [ "6\""],
-    "price": "25",
-    "productImage": "/ClickladProfilePhotos/C-015 Water Tight Locking Piece 6_.jpg",
-    "secondaryImage": "/Products/Colors.png",
-    "Profile Size": [
-      {
-        "inch": "1.89 x 0.611 x 0.06t",
-        "mm": "48.1 x 15.52 x 1.5t"
-      }
-    ],
-    "category": "Siding",
-    "colors": ["Wenge", "Teak", "Black", "White Oak"],
-    "features": [
-      {
-        "icon": "/icons/maintenance.png",
-        "name": "Maintenance Free",
-        "description": "Once installed, Clicklad will never require any maintenance to maintain its rich look"
-      },
-      {
-        "icon": "/icons/rain.png",
-        "name": "Scratch Resistant",
-        "description": "Clicklad is very durable and withstands scratches from other objects"
-      },
-      {
-        "icon": "/icons/fire.png", 
-        "name": "Non-Combustible",
-        "description": "Clicklad is non-combustible and can be installed where non-combustible material is required"
-      },
-      {
-        "icon": "/icons/recycle.png", 
-        "name": "Eco-Friendly",
-        "description": "Made from sustainable materials, reducing environmental impact."
-      }
-    ],
-    "related": [2, 3, 8,1]
-  }
-]
+  [
+    {
+      "id": 1,
+      "name": "Water Tight Cladding",
+      "description": "Description of Product 1",
+      "standard-size": "3.3′ x 1m",
+      "weight-per-unit": "lb / kg",
+      "unit-weight": "value",
+      "finish": "Woodgrain",
+      "sizes": ["6\"", "3\"", "4\"", "2\""],
+      "price": "25",
+      "productImage": "/ClickladProfilePhotos/C-010 6_ Water tight.jpg",
+      "secondaryImage": "/Products/Colors.png",
+      "Profile Size": [
+        {
+          "inch": "1.89 x 0.611 x 0.06t",
+          "mm": "48.1 x 15.52 x 1.5t"
+        }
+      ],
+      "category": "Siding",
+      "colors": ["Wenge", "Teak", "Black", "White Oak"],
+      "features": [
+        {
+          "icon": "/icons/maintenance.png",
+          "name": "Maintenance Free",
+          "description": "Once installed, Clicklad will never require any maintenance to maintain its rich look"
+        },
+        {
+          "icon": "/icons/rain.png", 
+          "name": "Scratch Resistant",
+          "description": "Clicklad is very durable and withstands scratches from other objects"
+        },
+        {
+          "icon": "/icons/fire.png", 
+          "name": "Non-Combustible",
+          "description": "Clicklad is non-combustible and can be installed where non-combustible material is required"
+        },
+        {
+          "icon": "/icons/recycle.png", 
+          "name": "Eco-Friendly",
+          "description": "Made from sustainable materials, reducing environmental impact."
+        }
+      ],
+      "related": [2, 3, 8,1]
+    },
+    {
+      "id": 2,
+      "name": "Water Tight Cladding",
+      "description": "Description of Product 1 size 2",
+      "standard-size": "3.3′ x 1m",
+      "weight-per-unit": "lb / kg",
+      "unit-weight": "value",
+      "finish": "Woodgrain",
+      "sizes": ["6\"", "3\"", "4\"", "2\""],
+      "price": "25",
+      "productImage": "/ClickladProfilePhotos/C-010 6_ Water tight.jpg",
+      "secondaryImage": "/Products/Colors.png",
+      "Profile Size": [
+        {
+          "inch": "1.89 x 0.611 x 0.06t",
+          "mm": "48.1 x 15.52 x 1.5t"
+        }
+      ],
+      "category": "Siding",
+      "colors": ["Wenge", "Teak", "Black", "White Oak"],
+      "features": [
+        {
+          "icon": "/icons/maintenance.png",
+          "name": "Maintenance Free",
+          "description": "Once installed, Clicklad will never require any maintenance to maintain its rich look"
+        },
+        {
+          "icon": "/icons/rain.png", 
+          "name": "Scratch Resistant",
+          "description": "Clicklad is very durable and withstands scratches from other objects"
+        },
+        {
+          "icon": "/icons/fire.png", 
+          "name": "Non-Combustible",
+          "description": "Clicklad is non-combustible and can be installed where non-combustible material is required"
+        },
+        {
+          "icon": "/icons/recycle.png", 
+          "name": "Eco-Friendly",
+          "description": "Made from sustainable materials, reducing environmental impact."
+        }
+      ],
+      "related": [2, 3, 8,1]
+    },
+    {
+      "id": 2,
+      "name": "Tight Gap",
+      "description": "Description of Product 2",
+      "standard-size": "3.3′ x 1m",
+      "weight-per-unit": "lb / kg",
+      "unit-weight": "value",
+      "finish": "Solid-Color",
+      "sizes": ["4.7\""],
+      "price": "25",
+      "productImage": "/ClickladProfilePhotos/C-011 4.7_ Tight Gap.jpg",
+      "secondaryImage": "/Products/Colors.png",
+      "Profile Size": [
+        {
+          "inch": "1.89 x 0.611 x 0.06t",
+          "mm": "48.1 x 15.52 x 1.5t"
+        }
+      ],
+      "category": "Click Rails",
+      "colors": ["Wenge", "Teak", "Black", "White Oak"],
+      "features": [
+        {
+          "icon": "/icons/maintenance.png", 
+          "name": "Maintenance Free",
+          "description": "Once installed, Clicklad will never require any maintenance to maintain its rich look"
+        },
+        {
+          "icon": "/icons/rain.png",
+          "name": "Scratch Resistant",
+          "description": "Clicklad is very durable and withstands scratches from other objects"
+        },
+        {
+          "icon": "/icons/fire.png",
+          "name": "Non-Combustible",
+          "description": "Clicklad is non-combustible and can be installed where non-combustible material is required"
+        },
+        {
+          "icon": "/icons/recycle.png", 
+          "name": "Eco-Friendly",
+          "description": "Made from sustainable materials, reducing environmental impact."
+        }
+      ],
+      "related": [2, 3, 8,1]
+    },
+    {
+      "id": 3,
+      "name": "Open Joint",
+      "description": "Description of Product 3",
+      "standard-size": "3.3′ x 1m",
+      "weight-per-unit": "lb / kg",
+      "unit-weight": "value",
+      "finish": "Woodgrain",
+      "sizes": ["4\"", "1.2\"", "2\"", "3\""],
+      "price": "25",
+      "productImage": "/ClickladProfilePhotos/C-012 4_ Open Joint.jpg",
+      "secondaryImage": "/Products/Colors.png",
+      "Profile Size": [
+        {
+          "inch": "1.89 x 0.611 x 0.06t",
+          "mm": "48.1 x 15.52 x 1.5t"
+        }
+      ],
+      "category": "Siding",
+      "colors": ["Wenge", "Teak", "Black", "White Oak"],
+      "features": [
+        {
+          "icon": "/icons/maintenance.png", 
+          "name": "Maintenance Free",
+          "description": "Once installed, Clicklad will never require any maintenance to maintain its rich look"
+        },
+        {
+          "icon": "/icons/rain.png", 
+          "name": "Scratch Resistant",
+          "description": "Clicklad is very durable and withstands scratches from other objects"
+        },
+        {
+          "icon": "/icons/fire.png",
+          "name": "Non-Combustible",
+          "description": "Clicklad is non-combustible and can be installed where non-combustible material is required"
+        },
+        {
+          "icon": "/icons/recycle.png",
+          "name": "Eco-Friendly",
+          "description": "Made from sustainable materials, reducing environmental impact."
+        }
+      ],
+      "related": [2, 3, 8,1]
+    },
+    {
+      "id": 8,
+      "name": "Water Tight Locking Piece",
+      "description": "Description of Product 8",
+      "standard-size": "3.3′ x 1m",
+      "weight-per-unit": "lb / kg",
+      "unit-weight": "value",
+      "finish": "Solid-Color",
+      "sizes": [ "6\""],
+      "price": "25",
+      "productImage": "/ClickladProfilePhotos/C-015 Water Tight Locking Piece 6_.jpg",
+      "secondaryImage": "/Products/Colors.png",
+      "Profile Size": [
+        {
+          "inch": "1.89 x 0.611 x 0.06t",
+          "mm": "48.1 x 15.52 x 1.5t"
+        }
+      ],
+      "category": "Siding",
+      "colors": ["Wenge", "Teak", "Black", "White Oak"],
+      "features": [
+        {
+          "icon": "/icons/maintenance.png",
+          "name": "Maintenance Free",
+          "description": "Once installed, Clicklad will never require any maintenance to maintain its rich look"
+        },
+        {
+          "icon": "/icons/rain.png",
+          "name": "Scratch Resistant",
+          "description": "Clicklad is very durable and withstands scratches from other objects"
+        },
+        {
+          "icon": "/icons/fire.png", 
+          "name": "Non-Combustible",
+          "description": "Clicklad is non-combustible and can be installed where non-combustible material is required"
+        },
+        {
+          "icon": "/icons/recycle.png", 
+          "name": "Eco-Friendly",
+          "description": "Made from sustainable materials, reducing environmental impact."
+        }
+      ],
+      "related": [2, 3, 8,1]
+    }
+  ]

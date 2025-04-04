@@ -40,17 +40,14 @@ const ContactPage = () => {
                         <h2 className={styles.heading}>Contact Us</h2>
                         <p className={styles.description}>
                             <span className={styles.contactItem}>
-                                <img src="/icons/map-marker-icon-green.png" className={styles.icon} alt="Map Marker" /> 
-                                123 Main Street, Toronto, ON, M3L 2J2
-                            </span><br />
-                            <span className={styles.contactItem}>
                                 <img src="/icons/phone-icon-green.png" className={styles.icon} alt="Phone" /> 
-                                647-842-4782
-                            </span><br />
+                                416-885-7330
+                            </span>
+                            {/* <br />
                             <span className={styles.contactItem}>
                                 <img src="/icons/email-icon-green.png" className={styles.icon} alt="Email" /> 
                                 info@clicklad.ca
-                            </span>
+                            </span> */}
                         </p>
                     </div>
                 </div>
