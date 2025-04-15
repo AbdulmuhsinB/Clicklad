@@ -50,7 +50,7 @@ const Contact = () => {
 
         try {
             const response = await axios.post("https://api.web3forms.com/submit", {
-                access_key: "3bd89381-1de5-4cb8-b1a0-efc2cfc1484e",
+                access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
                 name: e.target.name.value,
                 email: e.target.email.value,
                 message: e.target.message.value,

@@ -82,7 +82,7 @@ class Cart extends Component {
     const { formData, cart } = this.state;
 
     const data = {
-      access_key: '3bd89381-1de5-4cb8-b1a0-efc2cfc1484e',
+      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
       ...formData,
       cart: this.formatCartItems(cart)
     };
